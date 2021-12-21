@@ -10,9 +10,10 @@ Goal of project
 Installation
 ------------
 
-It's required to setup application environment variable:
+It's required to set up application environment variables:
 ```sh
 $ JAVA_HOME = [path]\java\jdk{version}
+$ PATTERNS_HOME = [path]\design-patterns
 ```
 ***
 
@@ -25,9 +26,9 @@ Creational patterns
 
 Structural patterns
 
-| Name                                                 | Description                                                                    |
-|:-----------------------------------------------------|:-------------------------------------------------------------------------------|
-| [Proxy](https://en.wikipedia.org/wiki/Proxy_pattern) | Provide a surrogate or placeholder for another object to control access to it. |
+|                         Name                         | Description                                                                    |                                        Practice                                        |
+|:----------------------------------------------------:|:-------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------:|
+| [Proxy](https://en.wikipedia.org/wiki/Proxy_pattern) | Provide a surrogate or placeholder for another object to control access to it. | [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/proxy/Proxy.java) |
 
 Behavioral patterns
 

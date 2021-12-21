@@ -1,7 +1,7 @@
-package com.witalis.design.patterns.pattern.structural;
+package com.witalis.design.patterns.pattern.structural.proxy;
 
 import com.witalis.design.patterns.pattern.IPattern;
-import com.witalis.design.patterns.pattern.structural.content.ProxyInvoker;
+import com.witalis.design.patterns.pattern.structural.proxy.content.ProxyInvoker;
 import com.witalis.design.patterns.utils.Classification;
 import com.witalis.design.patterns.utils.Pattern;
 

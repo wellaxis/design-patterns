@@ -1,6 +1,7 @@
 package com.witalis.design.patterns.pattern.structural;
 
 import com.witalis.design.patterns.pattern.IPattern;
+import com.witalis.design.patterns.pattern.structural.proxy.Proxy;
 import com.witalis.design.patterns.utils.Pattern;
 
 import lombok.extern.slf4j.Slf4j;
