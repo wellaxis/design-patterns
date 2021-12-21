@@ -17,6 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 @Slf4j
 @Tag("structural")
+@Tag("proxy")
 @DisplayName("Test: proxy pattern")
 @SpringBootTest
 public class ProxyUTest {
