@@ -24,6 +24,10 @@ $ PATTERNS_HOME = [path]\design-patterns
 
 Creational patterns
 
+|                           Name                           | Description                                                                                                                                      |                                          Practice                                          |
+|:--------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------:|
+| [Builder](https://en.wikipedia.org/wiki/Builder_pattern) | Separate the construction of a complex object from its representation, allowing the same construction process to create various representations. | [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/builder/Builder.java) |
+
 Structural patterns
 
 |                         Name                         | Description                                                                    |                                        Practice                                        |
