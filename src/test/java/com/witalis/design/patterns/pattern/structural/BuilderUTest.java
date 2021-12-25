@@ -1,7 +1,7 @@
 package com.witalis.design.patterns.pattern.structural;
 
 import com.witalis.design.patterns.pattern.IPattern;
-import com.witalis.design.patterns.pattern.structural.proxy.Proxy;
+import com.witalis.design.patterns.pattern.creational.builder.Builder;
 import com.witalis.design.patterns.utils.Pattern;
 
 import lombok.extern.slf4j.Slf4j;
@@ -11,29 +11,29 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Desc: Proxy unit test
+ * Desc: Builder unit test
  * User: Wellaxis
- * Date: 21.12.2021
+ * Date: 25.12.2021
  */
 @Slf4j
-@Tag("structural")
-@Tag("proxy")
-@DisplayName("Test: proxy pattern")
+@Tag("creational")
+@Tag("builder")
+@DisplayName("Test: builder pattern")
 @SpringBootTest
-public class ProxyUTest {
+public class BuilderUTest {
 
     @Nested
-    @Tag("structural")
-    @Tag("proxy")
-    @DisplayName("Test: proxy process")
-    class ProxyTest {
+    @Tag("creational")
+    @Tag("builder")
+    @DisplayName("Test: builder process")
+    class BuilderTest {
 
         @Test
-        @DisplayName("Test: proxy class")
+        @DisplayName("Test: builder class")
         void patternIsCorrect() {
 
-            assertThat(Proxy.class)
-                .as("Proxy class")
+            assertThat(Builder.class)
+                .as("Builder class")
                 .isPublic()
                 .isNotFinal()
                 .hasAnnotations(
@@ -49,14 +49,14 @@ public class ProxyUTest {
         }
 
         @Test
-        @DisplayName("Test: proxy instance")
+        @DisplayName("Test: builder instance")
         void processIsCorrect() {
-            IPattern proxy = new Proxy();
-            proxy.process();
+            IPattern builder = new Builder();
+            builder.process();
 
-            assertThat(proxy)
-                .as("Proxy processor")
-                .isInstanceOf(Proxy.class)
+            assertThat(builder)
+                .as("Builder processor")
+                .isInstanceOf(Builder.class)
                 .isNotNull();
         }
     }
