@@ -1,4 +1,4 @@
-package com.witalis.design.patterns.pattern.structural.proxy.content;
+package com.witalis.design.patterns.pattern.structural.proxy.content.object;
 
 import lombok.extern.slf4j.Slf4j;
 

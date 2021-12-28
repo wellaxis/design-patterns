@@ -1,5 +1,7 @@
 package com.witalis.design.patterns.pattern.structural.proxy.content;
 
+import com.witalis.design.patterns.pattern.structural.proxy.content.object.Invocable;
+import com.witalis.design.patterns.pattern.structural.proxy.content.object.Invoker;
 import lombok.extern.slf4j.Slf4j;
 
 /**

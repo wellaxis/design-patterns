@@ -24,9 +24,10 @@ $ PATTERNS_HOME = [path]\design-patterns
 
 Creational patterns
 
-|                           Name                           | Description                                                                                                                                      |                                          Practice                                          |
-|:--------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------:|
-| [Builder](https://en.wikipedia.org/wiki/Builder_pattern) | Separate the construction of a complex object from its representation, allowing the same construction process to create various representations. | [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/builder/Builder.java) |
+|                                         Name                                          | Description                                                                                                                                                                      |                                             Practice                                             |
+|:-------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------:|
+| [Simple Factory](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)) | Using factories instead of constructors or prototypes allows to use polymorphism for object creation, not only object use. Specifically, using factories provides encapsulation. | [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/factory/SimpleFactory.java) |
+|               [Builder](https://en.wikipedia.org/wiki/Builder_pattern)                | Separate the construction of a complex object from its representation, allowing the same construction process to create various representations.                                 |    [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/builder/Builder.java)    |
 
 Structural patterns
 

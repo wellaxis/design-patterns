@@ -8,7 +8,7 @@ import com.witalis.design.patterns.pattern.behavioral.visitor.content.visitor.Tr
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Desc: Invoker visitor class
+ * Desc: Invoker visitor pattern
  * User: Wellaxis
  * Date: 27.12.2021
  */
