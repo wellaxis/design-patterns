@@ -1,4 +1,4 @@
-package com.witalis.design.patterns.pattern.creational.builder.content;
+package com.witalis.design.patterns.pattern.creational.builder.content.object;
 
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
