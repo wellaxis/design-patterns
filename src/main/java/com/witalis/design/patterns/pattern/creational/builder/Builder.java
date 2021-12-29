@@ -21,8 +21,9 @@ public class Builder implements IPattern {
 
     @Override
     public void process() {
-        log.info("Pattern[builder]: process");
+        log.info("=================== Pattern[builder]: process ===================");
         var builder = new BuilderInvoker();
         builder.invoke();
+        log.info("=================================================================");
     }
 }
