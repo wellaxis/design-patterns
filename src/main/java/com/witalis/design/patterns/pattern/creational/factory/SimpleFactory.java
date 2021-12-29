@@ -21,8 +21,9 @@ public class SimpleFactory implements IPattern {
 
     @Override
     public void process() {
-        log.info("Pattern[factory]: process");
+        log.info("=================== Pattern[factory]: process ===================");
         var factory = new SimpleFactoryInvoker();
         factory.invoke();
+        log.info("=================================================================");
     }
 }

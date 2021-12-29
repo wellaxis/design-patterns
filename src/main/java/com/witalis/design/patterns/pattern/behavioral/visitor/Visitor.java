@@ -21,8 +21,9 @@ public class Visitor implements IPattern {
 
     @Override
     public void process() {
-        log.info("Pattern[visitor]: process");
+        log.info("=================== Pattern[visitor]: process ===================");
         var visitor = new VisitorInvoker();
         visitor.invoke();
+        log.info("=================================================================");
     }
 }

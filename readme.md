@@ -31,9 +31,10 @@ Creational patterns
 
 Structural patterns
 
-|                         Name                         | Description                                                                    |                                        Practice                                        |
-|:----------------------------------------------------:|:-------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------:|
-| [Proxy](https://en.wikipedia.org/wiki/Proxy_pattern) | Provide a surrogate or placeholder for another object to control access to it. | [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/proxy/Proxy.java) |
+|                           Name                           | Description                                                                                                                                                                |                                          Practice                                          |
+|:--------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------:|
+|   [Proxy](https://en.wikipedia.org/wiki/Proxy_pattern)   | Provide a surrogate or placeholder for another object to control access to it.                                                                                             |   [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/proxy/Proxy.java)   |
+| [Adapter](https://en.wikipedia.org/wiki/Adapter_pattern) | Convert the interface of a class into another interface clients expect. An adapter lets classes work together that could not otherwise because of incompatible interfaces. | [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/adapter/Adapter.java) |
 
 Behavioral patterns
 
