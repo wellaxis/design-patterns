@@ -1,9 +1,7 @@
 package com.witalis.design.patterns.pattern.behavioral.strategy.content;
 
 import com.witalis.design.patterns.pattern.behavioral.strategy.content.object.*;
-import com.witalis.design.patterns.pattern.behavioral.strategy.content.strategy.PowerUnitCharging;
-import com.witalis.design.patterns.pattern.behavioral.strategy.content.strategy.USBCharging;
-import com.witalis.design.patterns.pattern.behavioral.strategy.content.strategy.WirelessCharging;
+import com.witalis.design.patterns.pattern.behavioral.strategy.content.strategy.*;
 
 import lombok.extern.slf4j.Slf4j;
 

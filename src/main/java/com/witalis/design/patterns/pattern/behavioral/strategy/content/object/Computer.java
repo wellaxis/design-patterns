@@ -19,6 +19,9 @@ public abstract class Computer implements Device {
         this.chargingStrategy = chargingStrategy;
     }
 
+    /**
+     * Strategy will be changed out of object. Into client side.
+     */
     public void setChargingStrategy(ChargingStrategy strategy) {
         this.chargingStrategy = strategy;
     }
