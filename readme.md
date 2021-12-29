@@ -42,6 +42,7 @@ Behavioral patterns
 |:----------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------:|
 |  [Visitor](https://en.wikipedia.org/wiki/Visitor_pattern)  | Represent an operation to be performed on instances of a set of classes. Visitor lets a new operation be defined without changing the classes of the elements on which it operates. |  [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/visitor/Visitor.java)  |
 | [Strategy](https://en.wikipedia.org/wiki/Strategy_pattern) | Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.                        | [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/strategy/Strategy.java) |
+|    [State](https://en.wikipedia.org/wiki/State_pattern)    | Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.                                                                  |    [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/state/State.java)    |
 
 Concurrency patterns
 

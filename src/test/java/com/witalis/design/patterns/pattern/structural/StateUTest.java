@@ -1,7 +1,7 @@
 package com.witalis.design.patterns.pattern.structural;
 
 import com.witalis.design.patterns.pattern.IPattern;
-import com.witalis.design.patterns.pattern.behavioral.strategy.Strategy;
+import com.witalis.design.patterns.pattern.behavioral.state.State;
 import com.witalis.design.patterns.utils.Pattern;
 
 import lombok.extern.slf4j.Slf4j;
@@ -11,29 +11,29 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Desc: Strategy unit test
+ * Desc: State unit test
  * User: Wellaxis
  * Date: 29.12.2021
  */
 @Slf4j
 @Tag("behavioral")
-@Tag("strategy")
-@DisplayName("Test: strategy pattern")
+@Tag("state")
+@DisplayName("Test: state pattern")
 @SpringBootTest
-public class StrategyUTest {
+public class StateUTest {
 
     @Nested
     @Tag("behavioral")
-    @Tag("strategy")
-    @DisplayName("Test: strategy process")
-    class StrategyTest {
+    @Tag("state")
+    @DisplayName("Test: state process")
+    class StateTest {
 
         @Test
-        @DisplayName("Test: strategy class")
+        @DisplayName("Test: state class")
         void patternIsCorrect() {
 
-            assertThat(Strategy.class)
-                .as("Strategy class")
+            assertThat(State.class)
+                .as("State class")
                 .isPublic()
                 .isNotFinal()
                 .hasAnnotations(
@@ -49,14 +49,14 @@ public class StrategyUTest {
         }
 
         @Test
-        @DisplayName("Test: strategy instance")
+        @DisplayName("Test: state instance")
         void processIsCorrect() {
-            IPattern strategy = new Strategy();
-            strategy.process();
+            IPattern state = new State();
+            state.process();
 
-            assertThat(strategy)
-                .as("Strategy processor")
-                .isInstanceOf(Strategy.class)
+            assertThat(state)
+                .as("State processor")
+                .isInstanceOf(State.class)
                 .isNotNull();
         }
     }
