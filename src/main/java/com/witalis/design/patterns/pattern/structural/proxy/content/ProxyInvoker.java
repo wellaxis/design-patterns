@@ -1,7 +1,8 @@
 package com.witalis.design.patterns.pattern.structural.proxy.content;
 
-import com.witalis.design.patterns.pattern.structural.proxy.content.object.Invocable;
-import com.witalis.design.patterns.pattern.structural.proxy.content.object.Invoker;
+import com.witalis.design.patterns.pattern.structural.proxy.content.object.Loadable;
+import com.witalis.design.patterns.pattern.structural.proxy.content.proxy.LoaderProxy;
+
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -10,18 +11,14 @@ import lombok.extern.slf4j.Slf4j;
  * Date: 21.12.2021
  */
 @Slf4j
-public class ProxyInvoker implements Invocable {
-    private Invoker invoker;
+public class ProxyInvoker {
 
-    @Override
     public void invoke() {
         log.info("\tProxy: begin");
         long begin = System.nanoTime();
         try {
-            if (invoker == null) {
-                invoker = new Invoker();
-            }
-            invoker.invoke();
+            Loadable loader = new LoaderProxy();
+            loader.load();
         } catch (Exception e) {
             log.error("\tProxy: errors, {}", e.getMessage());
         }

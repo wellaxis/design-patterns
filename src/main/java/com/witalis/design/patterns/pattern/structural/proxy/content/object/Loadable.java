@@ -1,10 +1,10 @@
 package com.witalis.design.patterns.pattern.structural.proxy.content.object;
 
 /**
- * Desc: Invocable interface
+ * Desc: Loadable interface
  * User: Wellaxis
  * Date: 21.12.2021
  */
-public interface Invocable {
-    void invoke();
+public interface Loadable {
+    void load();
 }

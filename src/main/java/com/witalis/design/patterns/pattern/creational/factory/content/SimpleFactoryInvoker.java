@@ -1,6 +1,6 @@
 package com.witalis.design.patterns.pattern.creational.factory.content;
 
-import com.witalis.design.patterns.pattern.creational.factory.content.object.CoffeeFactory;
+import com.witalis.design.patterns.pattern.creational.factory.content.factory.CoffeeFactory;
 import com.witalis.design.patterns.pattern.creational.factory.content.object.CoffeeType;
 import com.witalis.design.patterns.pattern.creational.factory.content.object.ICoffee;
 import lombok.extern.slf4j.Slf4j;

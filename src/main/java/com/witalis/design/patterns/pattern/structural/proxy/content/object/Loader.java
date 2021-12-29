@@ -3,15 +3,15 @@ package com.witalis.design.patterns.pattern.structural.proxy.content.object;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Desc: Invoker class
+ * Desc: Loader class
  * User: Wellaxis
  * Date: 21.12.2021
  */
 @Slf4j
-public class Invoker implements Invocable {
+public class Loader implements Loadable {
 
     @Override
-    public void invoke() {
-        log.info("\tInvoker: handle...");
+    public void load() {
+        log.info("\tLoader: load data...");
     }
 }

@@ -1,4 +1,4 @@
-package com.witalis.design.patterns.pattern.structural.adapter.content.object;
+package com.witalis.design.patterns.pattern.structural.adapter.content.adapter;
 
 /**
  * Desc: Temperature adapter

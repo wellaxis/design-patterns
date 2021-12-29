@@ -1,4 +1,6 @@
-package com.witalis.design.patterns.pattern.creational.factory.content.object;
+package com.witalis.design.patterns.pattern.creational.factory.content.factory;
+
+import com.witalis.design.patterns.pattern.creational.factory.content.object.*;
 
 /**
  * Desc: Coffee factory class

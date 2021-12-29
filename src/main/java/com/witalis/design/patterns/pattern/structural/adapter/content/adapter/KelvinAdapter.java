@@ -1,4 +1,6 @@
-package com.witalis.design.patterns.pattern.structural.adapter.content.object;
+package com.witalis.design.patterns.pattern.structural.adapter.content.adapter;
+
+import com.witalis.design.patterns.pattern.structural.adapter.content.object.Temperature;
 
 /**
  * Desc: Kelvin adapter

@@ -1,5 +1,6 @@
 package com.witalis.design.patterns.pattern.structural.adapter.content;
 
+import com.witalis.design.patterns.pattern.structural.adapter.content.adapter.*;
 import com.witalis.design.patterns.pattern.structural.adapter.content.object.*;
 
 import lombok.extern.slf4j.Slf4j;

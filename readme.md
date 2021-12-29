@@ -38,9 +38,10 @@ Structural patterns
 
 Behavioral patterns
 
-|                           Name                           | Description                                                                                                                                                                         |                                          Practice                                          |
-|:--------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------:|
-| [Visitor](https://en.wikipedia.org/wiki/Visitor_pattern) | Represent an operation to be performed on instances of a set of classes. Visitor lets a new operation be defined without changing the classes of the elements on which it operates. | [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/visitor/Visitor.java) |
+|                            Name                            | Description                                                                                                                                                                         |                                           Practice                                           |
+|:----------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------:|
+|  [Visitor](https://en.wikipedia.org/wiki/Visitor_pattern)  | Represent an operation to be performed on instances of a set of classes. Visitor lets a new operation be defined without changing the classes of the elements on which it operates. |  [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/visitor/Visitor.java)  |
+| [Strategy](https://en.wikipedia.org/wiki/Strategy_pattern) | Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.                        | [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/strategy/Strategy.java) |
 
 Concurrency patterns
 
