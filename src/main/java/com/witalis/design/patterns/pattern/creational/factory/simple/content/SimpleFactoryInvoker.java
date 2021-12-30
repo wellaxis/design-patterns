@@ -1,8 +1,7 @@
-package com.witalis.design.patterns.pattern.creational.factory.content;
+package com.witalis.design.patterns.pattern.creational.factory.simple.content;
 
-import com.witalis.design.patterns.pattern.creational.factory.content.factory.CoffeeFactory;
-import com.witalis.design.patterns.pattern.creational.factory.content.object.CoffeeType;
-import com.witalis.design.patterns.pattern.creational.factory.content.object.ICoffee;
+import com.witalis.design.patterns.pattern.creational.factory.simple.content.object.*;
+
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -17,48 +16,35 @@ public class SimpleFactoryInvoker {
         log.info("\tSimple Factory: begin");
         long begin = System.nanoTime();
         try {
+            // shop
+            ICoffeeShop shop = new CoffeeShop();
+
             // coffee
             ICoffee coffee;
 
             log.info("");
 
             // the 1st cup
-            coffee = CoffeeFactory.produce(CoffeeType.ESPRESSO);
+            coffee = shop.orderCoffee(CoffeeType.ESPRESSO);
             log.info("*** The 1st cup: {}", coffee);
-            coffee.grind();
-            coffee.milk();
-            coffee.make();
-            coffee.pour();
 
             log.info("");
 
             // the 2nd cup
-            coffee = CoffeeFactory.produce(CoffeeType.AMERICANO);
+            coffee = shop.orderCoffee(CoffeeType.AMERICANO);
             log.info("*** The 2nd cup: {}", coffee);
-            coffee.grind();
-            coffee.milk();
-            coffee.make();
-            coffee.pour();
 
             log.info("");
 
             // the 3rd cup
-            coffee = CoffeeFactory.produce(CoffeeType.CAPPUCCINO);
+            coffee = shop.orderCoffee(CoffeeType.CAPPUCCINO);
             log.info("*** The 3rd cup: {}", coffee);
-            coffee.grind();
-            coffee.milk();
-            coffee.make();
-            coffee.pour();
 
             log.info("");
 
             // the 4th cup
-            coffee = CoffeeFactory.produce(CoffeeType.LATTE);
+            coffee = shop.orderCoffee(CoffeeType.LATTE);
             log.info("*** The 4th cup: {}", coffee);
-            coffee.grind();
-            coffee.milk();
-            coffee.make();
-            coffee.pour();
 
             log.info("");
 

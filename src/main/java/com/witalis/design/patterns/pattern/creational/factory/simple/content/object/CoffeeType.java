@@ -1,4 +1,4 @@
-package com.witalis.design.patterns.pattern.creational.factory.content.object;
+package com.witalis.design.patterns.pattern.creational.factory.simple.content.object;
 
 /**
  * Desc: Coffee type enumeration

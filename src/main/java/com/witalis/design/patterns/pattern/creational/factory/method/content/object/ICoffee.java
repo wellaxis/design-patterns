@@ -1,9 +1,9 @@
-package com.witalis.design.patterns.pattern.creational.factory.content.object;
+package com.witalis.design.patterns.pattern.creational.factory.method.content.object;
 
 /**
  * Desc: Coffee interface
  * User: Wellaxis
- * Date: 28.12.2021
+ * Date: 30.12.2021
  */
 public interface ICoffee {
     void grind();
