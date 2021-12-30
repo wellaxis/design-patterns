@@ -1,7 +1,7 @@
 package com.witalis.design.patterns.pattern.structural;
 
 import com.witalis.design.patterns.pattern.IPattern;
-import com.witalis.design.patterns.pattern.creational.factory.simple.SimpleFactory;
+import com.witalis.design.patterns.pattern.creational.factory.method.FactoryMethod;
 import com.witalis.design.patterns.utils.Pattern;
 
 import lombok.extern.slf4j.Slf4j;
@@ -11,29 +11,29 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Desc: Simple factory unit test
+ * Desc: Factory method unit test
  * User: Wellaxis
- * Date: 28.12.2021
+ * Date: 30.12.2021
  */
 @Slf4j
 @Tag("creational")
-@Tag("simple-factory")
-@DisplayName("Test: simple factory pattern")
+@Tag("factory-method")
+@DisplayName("Test: factory method pattern")
 @SpringBootTest
-public class SimpleFactoryUTest {
+public class FactoryMethodUTest {
 
     @Nested
     @Tag("creational")
-    @Tag("simple-factory")
-    @DisplayName("Test: simple factory process")
-    class SimpleFactoryTest {
+    @Tag("factory-method")
+    @DisplayName("Test: factory method process")
+    class FactoryMethodTest {
 
         @Test
-        @DisplayName("Test: simple factory class")
+        @DisplayName("Test: factory method class")
         void patternIsCorrect() {
 
-            assertThat(SimpleFactory.class)
-                .as("Simple factory class")
+            assertThat(FactoryMethod.class)
+                .as("Factory method class")
                 .isPublic()
                 .isNotFinal()
                 .hasAnnotations(
@@ -49,14 +49,14 @@ public class SimpleFactoryUTest {
         }
 
         @Test
-        @DisplayName("Test: simple factory instance")
+        @DisplayName("Test: factory method instance")
         void processIsCorrect() {
-            IPattern simpleFactory = new SimpleFactory();
-            simpleFactory.process();
+            IPattern factoryMethod = new FactoryMethod();
+            factoryMethod.process();
 
-            assertThat(simpleFactory)
-                .as("Simple factory processor")
-                .isInstanceOf(SimpleFactory.class)
+            assertThat(factoryMethod)
+                .as("Factory method processor")
+                .isInstanceOf(FactoryMethod.class)
                 .isNotNull();
         }
     }
