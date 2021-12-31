@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Desc: Abstract factory pattern
  * User: Wellaxis
- * Date: 30.12.2021
+ * Date: 31.12.2021
  */
 @Slf4j
 @Pattern(
@@ -22,8 +22,9 @@ public class AbstractFactory implements IPattern {
     /**
      * Definition:
      * -----------
-     * Abstract Factory -> Offers the interface for creating a family of related objects,
-     *     without explicitly specifying their classes.
+     * Abstract Factory -> offers the interface for creating a family of related objects,
+     *     without explicitly specifying their classes. An abstract factory usually has several implementations.
+     *     Each of them is responsible for creating products of one of the variations.
      *
      * Algorithm:
      * ----------

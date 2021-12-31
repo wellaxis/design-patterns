@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Desc: Invoker abstract factory pattern
  * User: Wellaxis
- * Date: 30.12.2021
+ * Date: 31.12.2021
  */
 @Slf4j
 public class AbstractFactoryInvoker {
@@ -14,7 +14,9 @@ public class AbstractFactoryInvoker {
         log.info("\tAbstract Factory: begin");
         long begin = System.nanoTime();
         try {
+
             log.info("");
+
         } catch (Exception e) {
             log.error("\tAbstract Factory: errors, {}", e.getMessage());
         }
