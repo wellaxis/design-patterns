@@ -1,4 +1,4 @@
-package com.witalis.design.patterns.pattern.creational.factory.method.content.object;
+package com.witalis.design.patterns.pattern.creational.factory.method.content.object.coffee;
 
 /**
  * Desc: Coffee interface

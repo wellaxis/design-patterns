@@ -28,8 +28,17 @@ public class AbstractFactory implements IPattern {
      *
      * Algorithm:
      * ----------
-     * 1. To create enumeration for every unique entity type.
-     * 2. To create factory class to initiate new entity instance by enum type.
+     * 1. To create enumerations for different unique entity types (different entities).
+     * 2. To create abstract factory class (interface) to initiate multiple different entity instances by enum types.
+     * 3. To add multiple abstract methods to create different entities for derived factories.
+     * 4. To create different realisations of this abstract factory for multiple entities.
+     *
+     * Example:
+     * --------
+     * 1. Enumerations -> CoffeeType [Americano, etc.], TeaType [Black, etc.]
+     * 2. Abstract factory -> Cafe (abstract class)
+     * 3. Abstract methods -> createCoffee(CoffeeType type), createTea(TeaType type)
+     * 4. Derived factories -> Alcoholic, Classic, Exotic, Instant caffs
      */
     @Override
     public void process() {

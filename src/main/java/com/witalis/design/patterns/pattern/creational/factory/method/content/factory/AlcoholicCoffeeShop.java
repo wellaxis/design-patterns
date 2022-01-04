@@ -1,6 +1,7 @@
 package com.witalis.design.patterns.pattern.creational.factory.method.content.factory;
 
 import com.witalis.design.patterns.pattern.creational.factory.method.content.object.*;
+import com.witalis.design.patterns.pattern.creational.factory.method.content.object.coffee.*;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -25,7 +26,7 @@ public class AlcoholicCoffeeShop extends CoffeeShop {
             case LATTE -> new Latte();
         };
 
-        log.info("It is an exotic coffee. With alcohol additives!");
+        log.info("It is an alcohol coffee. With alcohol additives!");
 
         // extra charge 30%
         var price = coffee.getPrice();

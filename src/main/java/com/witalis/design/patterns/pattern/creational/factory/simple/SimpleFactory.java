@@ -31,6 +31,12 @@ public class SimpleFactory implements IPattern {
      * 1. To create enumeration for every unique entity type.
      * 2. To create single factory class to initiate new entity instance by enum type.
      * 3. To add public static method to factory class to create new entities.
+     *
+     * Example:
+     * --------
+     * 1. Enumeration -> CoffeeType [Americano, Cappuccino, Espresso, Latte]
+     * 2. Simple factory -> CoffeeFactory
+     * 3. Static method -> create(CoffeeType type)
      */
     @Override
     public void process() {

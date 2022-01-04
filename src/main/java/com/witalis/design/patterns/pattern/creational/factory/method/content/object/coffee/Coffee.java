@@ -1,4 +1,4 @@
-package com.witalis.design.patterns.pattern.creational.factory.simple.content.object;
+package com.witalis.design.patterns.pattern.creational.factory.method.content.object.coffee;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Desc: Coffee abstract class
  * User: Wellaxis
- * Date: 28.12.2021
+ * Date: 30.12.2021
  */
 @Slf4j
 @Data
@@ -15,6 +15,7 @@ public abstract class Coffee implements ICoffee {
     private boolean milk;
     private double price;
     private String notes;
+
 
     protected Coffee(String name, boolean milk, double price, String notes) {
         this.name = name;

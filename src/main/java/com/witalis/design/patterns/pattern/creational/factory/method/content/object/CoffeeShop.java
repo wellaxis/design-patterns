@@ -1,5 +1,7 @@
 package com.witalis.design.patterns.pattern.creational.factory.method.content.object;
 
+import com.witalis.design.patterns.pattern.creational.factory.method.content.object.coffee.Coffee;
+import com.witalis.design.patterns.pattern.creational.factory.method.content.object.coffee.CoffeeType;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -17,6 +19,7 @@ public abstract class CoffeeShop implements ICoffeeShop {
 
     /**
      * Abstract factory method to create an entity instance.
+     * Entity creation is delegated to all derived subclasses.
      * <p/>
      * @param type the type of required entity
      * @return the instance of required entity

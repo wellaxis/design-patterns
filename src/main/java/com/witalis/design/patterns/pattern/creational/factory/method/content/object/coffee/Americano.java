@@ -1,11 +1,11 @@
-package com.witalis.design.patterns.pattern.creational.factory.abstracts.content.object;
+package com.witalis.design.patterns.pattern.creational.factory.method.content.object.coffee;
 
 import lombok.extern.slf4j.Slf4j;
 
 /**
  * Desc: Americano coffee class
  * User: Wellaxis
- * Date: 31.12.2021
+ * Date: 30.12.2021
  */
 @Slf4j
 public final class Americano extends Coffee {

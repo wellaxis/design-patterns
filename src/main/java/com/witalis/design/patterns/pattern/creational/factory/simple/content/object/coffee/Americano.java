@@ -1,4 +1,4 @@
-package com.witalis.design.patterns.pattern.creational.factory.simple.content.object;
+package com.witalis.design.patterns.pattern.creational.factory.simple.content.object.coffee;
 
 import lombok.extern.slf4j.Slf4j;
 

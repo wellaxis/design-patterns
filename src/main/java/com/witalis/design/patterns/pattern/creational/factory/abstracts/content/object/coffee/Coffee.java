@@ -1,4 +1,4 @@
-package com.witalis.design.patterns.pattern.creational.factory.method.content.object;
+package com.witalis.design.patterns.pattern.creational.factory.abstracts.content.object.coffee;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Desc: Coffee abstract class
  * User: Wellaxis
- * Date: 30.12.2021
+ * Date: 31.12.2021
  */
 @Slf4j
 @Data
