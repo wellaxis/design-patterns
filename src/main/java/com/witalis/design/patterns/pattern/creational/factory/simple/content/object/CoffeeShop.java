@@ -16,6 +16,7 @@ public class CoffeeShop implements ICoffeeShop {
 
     /**
      * Simple invoke static factory method to create an entity.
+     * Based on input type, we need to return a required subclass entity.
      * <p/>
      * @param type the type of required entity
      * @return the instance of required entity
