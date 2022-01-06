@@ -1,6 +1,6 @@
 package com.witalis.design.patterns.pattern.behavioral.state.content.object;
 
-import com.witalis.design.patterns.pattern.behavioral.state.content.state.WirelessCharging;
+import com.witalis.design.patterns.pattern.behavioral.state.content.state.WirelessChargingState;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 public class Mobile extends Computer {
 
     public Mobile(String name) {
-        super(name, new WirelessCharging());
+        super(name, new WirelessChargingState());
     }
 
     @Override

@@ -12,15 +12,15 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public abstract class Computer implements Device {
     private final String name;
-    private Charging charging;
+    private ChargingState chargingState;
 
-    protected Computer(String name, Charging charging) {
+    protected Computer(String name, ChargingState chargingState) {
         this.name = name;
-        this.charging = charging;
+        this.chargingState = chargingState;
     }
 
-    public void setCharging(Charging charging) {
-        this.charging = charging;
+    public void setCharging(ChargingState chargingState) {
+        this.chargingState = chargingState;
     }
 
     @Override
@@ -37,17 +37,17 @@ public abstract class Computer implements Device {
      * To change state of object. Into class directly.
      */
     public void changeCharge() {
-        if (charging instanceof PowerUnitCharging) {
-            setCharging(new USBCharging());
-        } else if (charging instanceof USBCharging) {
-            setCharging(new WirelessCharging());
-        } else if (charging instanceof WirelessCharging) {
-            setCharging(new PowerUnitCharging());
+        if (chargingState instanceof PowerUnitChargingState) {
+            setCharging(new USBChargingState());
+        } else if (chargingState instanceof USBChargingState) {
+            setCharging(new WirelessChargingState());
+        } else if (chargingState instanceof WirelessChargingState) {
+            setCharging(new PowerUnitChargingState());
         }
     }
 
     public void charge() {
-        charging.charge();
+        chargingState.charge();
     }
 
     @Override

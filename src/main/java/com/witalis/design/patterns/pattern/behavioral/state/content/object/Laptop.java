@@ -1,6 +1,6 @@
 package com.witalis.design.patterns.pattern.behavioral.state.content.object;
 
-import com.witalis.design.patterns.pattern.behavioral.state.content.state.PowerUnitCharging;
+import com.witalis.design.patterns.pattern.behavioral.state.content.state.PowerUnitChargingState;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 public class Laptop extends Computer {
 
     public Laptop(String name) {
-        super(name, new PowerUnitCharging());
+        super(name, new PowerUnitChargingState());
     }
 
     @Override

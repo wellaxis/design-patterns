@@ -1,6 +1,6 @@
 package com.witalis.design.patterns.pattern.behavioral.state.content.object;
 
-import com.witalis.design.patterns.pattern.behavioral.state.content.state.USBCharging;
+import com.witalis.design.patterns.pattern.behavioral.state.content.state.USBChargingState;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 public class Tablet extends Computer {
 
     public Tablet(String name) {
-        super(name, new USBCharging());
+        super(name, new USBChargingState());
     }
 
     @Override

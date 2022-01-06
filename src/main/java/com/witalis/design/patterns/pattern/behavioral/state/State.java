@@ -36,7 +36,7 @@ public class State implements IPattern {
      *
      * Example:
      * --------
-     * 1. State interface -> Charging { void charge(); }.
+     * 1. State interface -> ChargingState { void charge(); }.
      * 2. State classes -> [PowerUnit, USB, Wireless] { void charge(); }.
      * 3. Entity interface -> Device { void use(); }
      * 4. Entity abstract class -> Computer { private Charging charging; }
