@@ -16,22 +16,22 @@ import lombok.extern.slf4j.Slf4j;
 public class CruiseControlVisitor implements CarVisitor {
 
     @Override
-    public void accept(Audi audi) {
+    public void visit(Audi audi) {
         log.info("{} has an adaptive cruise control.", Audi.class.getSimpleName());
     }
 
     @Override
-    public void accept(Bmw bmw) {
+    public void visit(Bmw bmw) {
         log.info("{} has an auto-drive cruise system.", Audi.class.getSimpleName());
     }
 
     @Override
-    public void accept(Mercedes mercedes) {
+    public void visit(Mercedes mercedes) {
         log.info("{} has a passive cruise control.", Audi.class.getSimpleName());
     }
 
     @Override
-    public void accept(Volkswagen volkswagen) {
+    public void visit(Volkswagen volkswagen) {
         log.info("{} hasn't a cruise control at all.", Audi.class.getSimpleName());
     }
 }

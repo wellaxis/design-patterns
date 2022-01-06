@@ -19,6 +19,6 @@ public class Bmw implements Car {
 
     @Override
     public void accept(CarVisitor visitor) {
-        visitor.accept(this);
+        visitor.visit(this);
     }
 }

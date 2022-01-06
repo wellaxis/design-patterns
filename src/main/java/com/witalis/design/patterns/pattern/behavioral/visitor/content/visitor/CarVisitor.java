@@ -11,8 +11,8 @@ import com.witalis.design.patterns.pattern.behavioral.visitor.content.object.Vol
  * Date: 27.12.2021
  */
 public interface CarVisitor {
-    void accept(Audi audi);
-    void accept(Bmw bmw);
-    void accept(Mercedes mercedes);
-    void accept(Volkswagen volkswagen);
+    void visit(Audi audi);
+    void visit(Bmw bmw);
+    void visit(Mercedes mercedes);
+    void visit(Volkswagen volkswagen);
 }
