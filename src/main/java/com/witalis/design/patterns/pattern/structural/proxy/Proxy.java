@@ -36,10 +36,10 @@ public class Proxy implements IPattern {
      *
      * Example:
      * --------
-     * 1. Entity interface -> {@see com.witalis.design.patterns.pattern.structural.proxy.content.object.Loadable} { void load(); }
-     * 2. Entity class -> {@link com.witalis.design.patterns.pattern.structural.proxy.content.object.Loader} { @Override void load(); }
-     * 3. Proxy class -> {@link com.witalis.design.patterns.pattern.structural.proxy.content.proxy.LoaderProxy} { @Override void load(); }
-     * 4. Proxy property -> {@link com.witalis.design.patterns.pattern.structural.proxy.content.object.Loader} { private Loader loader; }
+     * 1. Entity interface -> {@link com.witalis.design.patterns.pattern.structural.proxy.content.object.Loadable Loadable} { void load(); }
+     * 2. Entity class -> {@link com.witalis.design.patterns.pattern.structural.proxy.content.object.Loader Loader} { @Override void load(); }
+     * 3. Proxy class -> {@link com.witalis.design.patterns.pattern.structural.proxy.content.proxy.LoaderProxy LoaderProxy} { @Override void load(); }
+     * 4. Proxy property -> {@link com.witalis.design.patterns.pattern.structural.proxy.content.object.Loader Loader} { private Loader loader; }
      */
     @Override
     public void process() {
