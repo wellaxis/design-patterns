@@ -22,7 +22,7 @@ public class State implements IPattern {
     /**
      * Definition:
      * -----------
-     * Visitor -> allows an object to change its behavior based on its state.
+     * State -> allows an object to change its behavior based on its state.
      *     The state pattern is used in computer programming to encapsulate
      *     varying behavior for the same object, based on its internal state.
      *

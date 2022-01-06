@@ -37,8 +37,8 @@ public class Visitor implements IPattern {
      *
      * Example:
      * --------
-     * 1. Entity interface -> Car { void accept(CarVisitor visitor); }.
-     * 2. Visitor interface -> CarVisitor { void visit(Audi audi); etc. }.
+     * 1. Entity interface -> Car { void accept(CarVisitor visitor); }
+     * 2. Visitor interface -> CarVisitor { void visit(Audi audi); etc. }
      * 3. Entity classes -> [Audi, Bmw, Mercedes, Volkswagen], { visitor.visit(this); }
      * 4. Visitor classes -> [CruiseControl, Transmission], { void visit(Audi audi); etc. }
      */

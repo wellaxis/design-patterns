@@ -35,8 +35,8 @@ public class Builder implements IPattern {
      *
      * Example:
      * --------
-     * 1. Class -> Account [id, name, etc.], private constructor.
-     * 2. Nested class -> Builder [no fields], private constructor.
+     * 1. Class -> Account [id, name, etc.], private constructor
+     * 2. Nested class -> Builder [no fields], private constructor
      * 3. Static method -> static Builder builder() { return new Account().new Builder() }
      * 4. Builder setter -> Builder setName(String name) { Account.this.name = name; return this; }
      * 5. Builder build -> public Account build() { return Account.this; }
