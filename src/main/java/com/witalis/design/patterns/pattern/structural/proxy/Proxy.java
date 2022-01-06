@@ -19,6 +19,28 @@ import lombok.extern.slf4j.Slf4j;
 )
 public class Proxy implements IPattern {
 
+    /**
+     * Definition:
+     * -----------
+     * Proxy -> represents objects that can control other objects
+     *     by intercepting their calls. It is possible to intercept
+     *     the call to the original object. Provide a placeholder
+     *     for another object to control access to it.
+     *
+     * Algorithm:
+     * ----------
+     * 1. To create a common interface for entities behaviour.
+     * 2. To create an entity implementation based on common interface.
+     * 3. To create a proxy implementation based on common interface.
+     * 4. To add an entity property into a proxy class.
+     *
+     * Example:
+     * --------
+     * 1. Entity interface -> Loadable { void load(); }
+     * 2. Entity class -> Loader { @Override void load(); }
+     * 3. Proxy class -> LoaderProxy { @Override void load(); }
+     * 4. Proxy property -> Loader { private Loader loader; }
+     */
     @Override
     public void process() {
         log.info("=================== Pattern[proxy]: process =====================");
