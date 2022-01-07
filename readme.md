@@ -23,6 +23,8 @@ $ PATTERNS_HOME = [path]\design-patterns
 > within a given context in software design.
 
 `Creational` patterns
+> Creational patterns - provide the capability to create objects
+> based on a required criterion and in a controlled way.
 
 |                                         Name                                          | Description                                                                                                                                                                      |                                                   Practice                                                   |
 |:-------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------:|
@@ -31,6 +33,7 @@ $ PATTERNS_HOME = [path]\design-patterns
 |      [Abstract Factory](https://en.wikipedia.org/wiki/Abstract_factory_pattern)       | Provide an interface for creating families of related or dependent objects without specifying their concrete classes.                                                            | [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/factory/abstracts/AbstractFactory.java) |
 |               [Builder](https://en.wikipedia.org/wiki/Builder_pattern)                | Separate the construction of a complex object from its representation, allowing the same construction process to create various representations.                                 |          [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/builder/Builder.java)          |
 |             [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern)              | Ensure a class has only one instance, and provide a global point of access to it.                                                                                                |        [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/singleton/Singleton.java)        |
+|             [Prototype](https://en.wikipedia.org/wiki/Prototype_pattern)              | Specify the kinds of objects to create using a prototypical instance, and create new objects from the 'skeleton' of an existing object.                                          |        [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/prototype/Prototype.java)        |
 
 `Structural` patterns
 
