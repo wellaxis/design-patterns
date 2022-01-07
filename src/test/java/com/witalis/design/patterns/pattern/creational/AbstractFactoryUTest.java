@@ -1,4 +1,4 @@
-package com.witalis.design.patterns.pattern.structural;
+package com.witalis.design.patterns.pattern.creational;
 
 import com.witalis.design.patterns.pattern.IPattern;
 import com.witalis.design.patterns.pattern.creational.factory.abstracts.AbstractFactory;

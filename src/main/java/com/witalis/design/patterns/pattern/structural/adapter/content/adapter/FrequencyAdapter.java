@@ -1,10 +1,11 @@
 package com.witalis.design.patterns.pattern.structural.adapter.content.adapter;
 
 /**
- * Desc: Temperature adapter
+ * Desc: Frequency adapter
  * User: Wellaxis
- * Date: 29.12.2021
+ * Date: 28.12.2021
  */
-public interface TemperatureAdapter {
+public interface FrequencyAdapter {
+    String getDescription();
     double getValue();
 }

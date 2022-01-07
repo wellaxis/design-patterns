@@ -34,10 +34,10 @@ public class Adapter implements IPattern {
      *
      * Example:
      * --------
-     * 1. Entity interface -> Temperature { double getValue(); }
-     * 2. Entity classes -> [Flat, Health, Sun] { double getValue(); }
-     * 3. Adapter interface -> TemperatureAdapter { double getValue(); }
-     * 4. Adapter classes -> [Kelvin, Fahrenheit] { double getValue(); }
+     * 1. Entity interface -> Device { double getSpeed(); }
+     * 2. Entity classes -> [Laptop, Tablet, Mobile] { double getSpeed(); }
+     * 3. Adapter interface -> FrequencyAdapter { double getValue(); }
+     * 4. Adapter classes -> [Mega, Kilo, Hertz] { double getValue(); }
      */
     @Override
     public void process() {

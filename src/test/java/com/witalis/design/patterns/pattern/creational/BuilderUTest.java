@@ -1,7 +1,7 @@
-package com.witalis.design.patterns.pattern.structural;
+package com.witalis.design.patterns.pattern.creational;
 
 import com.witalis.design.patterns.pattern.IPattern;
-import com.witalis.design.patterns.pattern.creational.factory.simple.SimpleFactory;
+import com.witalis.design.patterns.pattern.creational.builder.Builder;
 import com.witalis.design.patterns.utils.Pattern;
 
 import lombok.extern.slf4j.Slf4j;
@@ -11,29 +11,29 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Desc: Simple factory unit test
+ * Desc: Builder unit test
  * User: Wellaxis
- * Date: 28.12.2021
+ * Date: 25.12.2021
  */
 @Slf4j
 @Tag("creational")
-@Tag("simple-factory")
-@DisplayName("Test: simple factory pattern")
+@Tag("builder")
+@DisplayName("Test: builder pattern")
 @SpringBootTest
-public class SimpleFactoryUTest {
+public class BuilderUTest {
 
     @Nested
     @Tag("creational")
-    @Tag("simple-factory")
-    @DisplayName("Test: simple factory process")
-    class SimpleFactoryTest {
+    @Tag("builder")
+    @DisplayName("Test: builder process")
+    class BuilderTest {
 
         @Test
-        @DisplayName("Test: simple factory class")
+        @DisplayName("Test: builder class")
         void patternIsCorrect() {
 
-            assertThat(SimpleFactory.class)
-                .as("Simple factory class")
+            assertThat(Builder.class)
+                .as("Builder class")
                 .isPublic()
                 .isNotFinal()
                 .hasAnnotations(
@@ -49,14 +49,14 @@ public class SimpleFactoryUTest {
         }
 
         @Test
-        @DisplayName("Test: simple factory instance")
+        @DisplayName("Test: builder instance")
         void processIsCorrect() {
-            IPattern simpleFactory = new SimpleFactory();
-            simpleFactory.process();
+            IPattern builder = new Builder();
+            builder.process();
 
-            assertThat(simpleFactory)
-                .as("Simple factory processor")
-                .isInstanceOf(SimpleFactory.class)
+            assertThat(builder)
+                .as("Builder processor")
+                .isInstanceOf(Builder.class)
                 .isNotNull();
         }
     }

@@ -36,10 +36,10 @@ public class Proxy implements IPattern {
      *
      * Example:
      * --------
-     * 1. Entity interface -> Loadable { void load(); }
-     * 2. Entity class -> Loader { @Override void load(); }
-     * 3. Proxy class -> LoaderProxy { @Override void load(); }
-     * 4. Proxy property -> Loader { private Loader loader; }
+     * 1. Entity interface -> Device { void use(); }
+     * 2. Entity class -> Computer { @Override void use(); }
+     * 3. Proxy class -> SecureComputer { @Override void use(); }
+     * 4. Proxy property -> SecureComputer { private Computer computer; }
      */
     @Override
     public void process() {
