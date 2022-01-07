@@ -12,46 +12,52 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public abstract class Computer implements Device {
     private final String name;
-    private ChargingState chargingState;
+    private WorkingState workingState;
 
-    protected Computer(String name, ChargingState chargingState) {
+    protected Computer(String name, WorkingState workingState) {
         this.name = name;
-        this.chargingState = chargingState;
+        this.workingState = workingState;
     }
 
-    public void setCharging(ChargingState chargingState) {
-        this.chargingState = chargingState;
+    public WorkingState getWorkingState() {
+        return workingState;
+    }
+
+    public void setWorkingState(WorkingState workingState) {
+        this.workingState = workingState;
     }
 
     @Override
     public void turnOn() {
-        log.info("Turn on {}", this);
+        log.info("\t+ Turn on computer device");
     }
 
     @Override
     public void turnOff() {
-        log.info("Turn off {}", this);
+        log.info("\t- Turn off computer device");
     }
 
     /**
      * To change state of object. Into class directly.
      */
-    public void changeCharge() {
-        if (chargingState instanceof PowerUnitChargingState) {
-            setCharging(new USBChargingState());
-        } else if (chargingState instanceof USBChargingState) {
-            setCharging(new WirelessChargingState());
-        } else if (chargingState instanceof WirelessChargingState) {
-            setCharging(new PowerUnitChargingState());
+    public void changeState() {
+        if (workingState instanceof BrokenState) {
+            setWorkingState(new ForRepairState());
+        } else if (workingState instanceof ForRepairState) {
+            setWorkingState(new RepairedState());
+        } else if (workingState instanceof RepairedState) {
+            setWorkingState(new FromRepairState());
+        } else if (workingState instanceof FromRepairState) {
+            setWorkingState(new ReadyState());
         }
     }
 
-    public void charge() {
-        chargingState.charge();
+    public void check() {
+        workingState.condition();
     }
 
     @Override
     public String toString() {
-        return getClass().getSimpleName().toLowerCase() + ": [" + name + "]";
+        return "Device [" + getClass().getSimpleName().toLowerCase() + ": " + name + "]";
     }
 }

@@ -1,10 +1,10 @@
 package com.witalis.design.patterns.pattern.behavioral.state.content.state;
 
 /**
- * Desc: Charging state
+ * Desc: Work state
  * User: Wellaxis
- * Date: 29.12.2021
+ * Date: 07.01.2022
  */
-public interface ChargingState {
-    void charge();
+public interface WorkingState {
+    void condition();
 }

@@ -20,13 +20,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Tag("proxy")
 @DisplayName("Test: proxy pattern")
 @SpringBootTest
-public class ProxyUTest {
+public class SingletonUTest {
 
     @Nested
     @Tag("structural")
     @Tag("proxy")
     @DisplayName("Test: proxy process")
-    class ProxyTest {
+    class SingletonTest {
 
         @Test
         @DisplayName("Test: proxy class")

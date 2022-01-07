@@ -31,14 +31,14 @@ $ PATTERNS_HOME = [path]\design-patterns
 |      [Abstract Factory](https://en.wikipedia.org/wiki/Abstract_factory_pattern)       | Provide an interface for creating families of related or dependent objects without specifying their concrete classes.                                                            | [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/factory/abstracts/AbstractFactory.java) |
 |               [Builder](https://en.wikipedia.org/wiki/Builder_pattern)                | Separate the construction of a complex object from its representation, allowing the same construction process to create various representations.                                 |          [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/builder/Builder.java)          |
 
-Structural patterns
+`Structural` patterns
 
 |                           Name                           | Description                                                                                                                                                                |                                          Practice                                          |
 |:--------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------:|
 |   [Proxy](https://en.wikipedia.org/wiki/Proxy_pattern)   | Provide a surrogate or placeholder for another object to control access to it.                                                                                             |   [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/proxy/Proxy.java)   |
 | [Adapter](https://en.wikipedia.org/wiki/Adapter_pattern) | Convert the interface of a class into another interface clients expect. An adapter lets classes work together that could not otherwise because of incompatible interfaces. | [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/adapter/Adapter.java) |
 
-Behavioral patterns
+`Behavioral` patterns
 
 |                            Name                            | Description                                                                                                                                                                         |                                           Practice                                           |
 |:----------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------:|
@@ -46,9 +46,9 @@ Behavioral patterns
 | [Strategy](https://en.wikipedia.org/wiki/Strategy_pattern) | Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.                        | [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/strategy/Strategy.java) |
 |    [State](https://en.wikipedia.org/wiki/State_pattern)    | Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.                                                                  |    [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/state/State.java)    |
 
-Concurrency patterns
+`Concurrency` patterns
 
-Anti patterns
+`Anti` patterns
 
 ***
 

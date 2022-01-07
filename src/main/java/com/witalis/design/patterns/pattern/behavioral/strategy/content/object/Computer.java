@@ -28,12 +28,12 @@ public abstract class Computer implements Device {
 
     @Override
     public void turnOn() {
-        log.info("Turn on {}", this);
+        log.info("\t+ Turn on computer device");
     }
 
     @Override
     public void turnOff() {
-        log.info("Turn off {}", this);
+        log.info("\t- Turn off computer device");
     }
 
     public void charge() {
@@ -42,6 +42,6 @@ public abstract class Computer implements Device {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName().toLowerCase() + ": [" + name + "]";
+        return "Device [" + getClass().getSimpleName().toLowerCase() + ": " + name + "]";
     }
 }

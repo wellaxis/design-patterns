@@ -1,6 +1,6 @@
 package com.witalis.design.patterns.pattern.behavioral.strategy.content.object;
 
-import com.witalis.design.patterns.pattern.behavioral.strategy.content.strategy.USBCharging;
+import com.witalis.design.patterns.pattern.behavioral.strategy.content.strategy.USBStrategy;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,12 +13,12 @@ import lombok.extern.slf4j.Slf4j;
 public class Tablet extends Computer {
 
     public Tablet(String name) {
-        super(name, new USBCharging());
+        super(name, new USBStrategy());
     }
 
     @Override
     public void use() {
-        log.info("Play online game...");
-        log.info("Watch a new film...");
+        log.info("\t> Play online game...");
+        log.info("\t> Watch a new film...");
     }
 }

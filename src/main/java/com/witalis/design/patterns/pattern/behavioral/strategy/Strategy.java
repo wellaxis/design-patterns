@@ -27,6 +27,18 @@ public class Strategy implements IPattern {
      *     vary independently of clients that use it. The strategy algorithm
      *     can be changed during program execution.
      *
+     *     Based upon the Open closed design principle,
+     *     represents ‘O’ from SOLID design principles.
+     *
+     *     The pattern Strategy makes it easy to add a new strategy
+     *     without changing the context of the object.
+     *
+     *     The client is free to choose any Strategy implementation of his choice.
+     *     It is not required to have the order of strategies use.
+     *
+     *     Changing the Strategy is performed by the Client.
+     *     Changing the State can be performed by the context or the state of the object independently.
+     *
      * Algorithm:
      * ----------
      * 1. To create a strategy interface with required methods.
@@ -40,7 +52,7 @@ public class Strategy implements IPattern {
      * 1. State interface -> ChargingStrategy { void charge(); }.
      * 2. State classes -> [PowerUnit, USB, Wireless] { void charge(); }.
      * 3. Entity interface -> Device { void use(); }
-     * 4. Entity abstract class -> Computer { private Charging charging; }
+     * 4. Entity abstract class -> Computer { private ChargingStrategy chargingStrategy; }
      * 5. Entity classes -> [Laptop, Tablet, Mobile] { void setChargingStrategy(); }
      */
     @Override

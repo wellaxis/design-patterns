@@ -1,6 +1,7 @@
 package com.witalis.design.patterns.pattern.behavioral.state.content;
 
 import com.witalis.design.patterns.pattern.behavioral.state.content.object.*;
+import com.witalis.design.patterns.pattern.behavioral.state.content.state.*;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -17,38 +18,26 @@ public class StateInvoker {
         long begin = System.nanoTime();
         try {
 
+            log.info("");
+
             // laptop
             Computer miBook = new Laptop("Xiaomi Mi Notebook Pro 14'");
-            miBook.charge();
-            miBook.turnOn();
-            miBook.use();
-            miBook.turnOff();
+            log.info(miBook.toString());
+            scenario(miBook);
 
             log.info("");
 
             // tablet
             Computer miPad = new Tablet("Xiaomi Mi Pad 5 Wi-Fi");
-            miPad.charge();
-            miPad.turnOn();
-            miPad.use();
-            miPad.changeCharge();
-            miPad.charge();
-            miPad.use();
-            miPad.turnOff();
+            log.info(miPad.toString());
+            scenario(miPad);
 
             log.info("");
 
             // mobile
             Computer miPhone = new Mobile("Xiaomi 11T Pro");
-            miPhone.charge();
-            miPhone.turnOn();
-            miPhone.changeCharge();
-            miPhone.charge();
-            miPhone.use();
-            miPhone.changeCharge();
-            miPhone.charge();
-            miPhone.use();
-            miPhone.turnOff();
+            log.info(miPhone.toString());
+            scenario(miPhone);
 
             log.info("");
 
@@ -57,5 +46,35 @@ public class StateInvoker {
         }
         long end = System.nanoTime();
         log.info("\tState: end, time = {} ms", (end - begin) / 1000);
+    }
+
+    private void scenario(Computer device) {
+        // on
+        device.turnOn();
+        // new
+        device.check();
+        device.use();
+        // broken
+        device.setWorkingState(new BrokenState());
+        device.check();
+        device.use();
+        // for repair
+        device.changeState();
+        device.check();
+        device.use();
+        // repaired
+        device.setWorkingState(new RepairedState());
+        device.check();
+        device.use();
+        // from repair
+        device.changeState();
+        device.check();
+        device.use();
+        // ready
+        device.changeState();
+        device.check();
+        device.use();
+        // off
+        device.turnOff();
     }
 }

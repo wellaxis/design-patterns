@@ -1,0 +1,17 @@
+package com.witalis.design.patterns.pattern.behavioral.state.content.state;
+
+import lombok.extern.slf4j.Slf4j;
+
+/**
+ * Desc: For Repair state
+ * User: Wellaxis
+ * Date: 07.01.2022
+ */
+@Slf4j
+public class ForRepairState implements WorkingState {
+
+    @Override
+    public void condition() {
+        log.info("\t# Device is not working. Take it for repair...");
+    }
+}

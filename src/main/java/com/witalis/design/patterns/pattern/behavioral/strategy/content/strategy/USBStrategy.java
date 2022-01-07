@@ -8,10 +8,10 @@ import lombok.extern.slf4j.Slf4j;
  * Date: 29.12.2021
  */
 @Slf4j
-public class USBCharging implements ChargingStrategy {
+public class USBStrategy implements ChargingStrategy {
 
     @Override
     public void charge() {
-        log.info("Universal Serial Bus charging. Very common!");
+        log.info("\t# Universal Serial Bus charging. Very common!");
     }
 }

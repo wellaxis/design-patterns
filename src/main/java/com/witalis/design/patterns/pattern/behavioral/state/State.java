@@ -26,6 +26,18 @@ public class State implements IPattern {
      *     The state pattern is used in computer programming to encapsulate
      *     varying behavior for the same object, based on its internal state.
      *
+     *     Based upon the Open closed design principle,
+     *     represents ‘O’ from SOLID design principles.
+     *
+     *     The pattern State makes it easy to add a new state
+     *     without changing the context of the object.
+     *
+     *     The order of state transition is well-defined in the State pattern;
+     *     there is no such requirement for the Strategy pattern.
+     *
+     *     Changing the State can be performed by the context or the state of the object independently.
+     *     Changing the Strategy is performed by the Client.
+     *
      * Algorithm:
      * ----------
      * 1. To create a state interface with required methods.
@@ -36,11 +48,11 @@ public class State implements IPattern {
      *
      * Example:
      * --------
-     * 1. State interface -> ChargingState { void charge(); }.
-     * 2. State classes -> [PowerUnit, USB, Wireless] { void charge(); }.
+     * 1. State interface -> WorkingState { void condition(); }.
+     * 2. State classes -> [New, Broken, Repaired, Ready, etc.] { void condition(); }.
      * 3. Entity interface -> Device { void use(); }
-     * 4. Entity abstract class -> Computer { private Charging charging; }
-     * 5. Entity classes -> [Laptop, Tablet, Mobile] { void changeCharge(); }
+     * 4. Entity abstract class -> Computer { private WorkingState workingState; }
+     * 5. Entity classes -> [Laptop, Tablet, Mobile] { void use(); }
      */
     @Override
     public void process() {

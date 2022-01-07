@@ -18,38 +18,26 @@ public class StrategyInvoker {
         long begin = System.nanoTime();
         try {
 
+            log.info("");
+
             // laptop
             Computer macBook = new Laptop("Apple MacBook Pro 13'");
-            macBook.charge();
-            macBook.turnOn();
-            macBook.use();
-            macBook.turnOff();
+            log.info(macBook.toString());
+            scenario(macBook);
 
             log.info("");
 
             // tablet
             Computer iPad = new Tablet("Apple iPad 10.2");
-            iPad.charge();
-            iPad.turnOn();
-            iPad.use();
-            iPad.setChargingStrategy(new WirelessCharging());
-            iPad.charge();
-            iPad.use();
-            iPad.turnOff();
+            log.info(iPad.toString());
+            scenario(iPad);
 
             log.info("");
 
             // mobile
             Computer iPhone = new Mobile("Apple iPhone 13 Pro");
-            iPhone.charge();
-            iPhone.turnOn();
-            iPhone.setChargingStrategy(new USBCharging());
-            iPhone.charge();
-            iPhone.use();
-            iPhone.setChargingStrategy(new PowerUnitCharging());
-            iPhone.charge();
-            iPhone.use();
-            iPhone.turnOff();
+            log.info(iPhone.toString());
+            scenario(iPhone);
 
             log.info("");
 
@@ -58,5 +46,27 @@ public class StrategyInvoker {
         }
         long end = System.nanoTime();
         log.info("\tStrategy: end, time = {} ms", (end - begin) / 1000);
+    }
+
+    private void scenario(Computer device) {
+        // on
+        device.turnOn();
+        // default
+        device.charge();
+        device.use();
+        // wireless
+        device.setChargingStrategy(new WirelessStrategy());
+        device.charge();
+        device.use();
+        // usb
+        device.setChargingStrategy(new USBStrategy());
+        device.charge();
+        device.use();
+        // repaired
+        device.setChargingStrategy(new PowerUnitStrategy());
+        device.charge();
+        device.use();
+        // off
+        device.turnOff();
     }
 }

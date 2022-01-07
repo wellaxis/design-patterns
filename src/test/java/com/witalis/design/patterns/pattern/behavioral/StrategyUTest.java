@@ -1,4 +1,4 @@
-package com.witalis.design.patterns.pattern.structural;
+package com.witalis.design.patterns.pattern.behavioral;
 
 import com.witalis.design.patterns.pattern.IPattern;
 import com.witalis.design.patterns.pattern.behavioral.strategy.Strategy;

@@ -31,15 +31,15 @@ public class Visitor implements IPattern {
      * Algorithm:
      * ----------
      * 1. To create an entity interface with an accept method for a visitor.
-     * 2. To create a visitor interface with multiple visit methods.
+     * 2. To create a visitor interface with multiple visit methods for every entity.
      * 3. To create multiple entity class realizations & overrides of accept methods.
      * 4. To create multiple visitor class realizations & overrides of visit methods.
      *
      * Example:
      * --------
-     * 1. Entity interface -> Car { void accept(CarVisitor visitor); }
-     * 2. Visitor interface -> CarVisitor { void visit(Audi audi); etc. }
-     * 3. Entity classes -> [Audi, Bmw, Mercedes, Volkswagen], { visitor.visit(this); }
+     * 1. Entity interface -> Device { void accept(DeviceVisitor visitor); }
+     * 2. Visitor interface -> DeviceVisitor { void visit(Laptop laptop); etc. }
+     * 3. Entity classes -> [Laptop, Mobile, Tablet], { visitor.visit(this); }
      * 4. Visitor classes -> [CruiseControl, Transmission], { void visit(Audi audi); etc. }
      */
     @Override

@@ -1,11 +1,11 @@
 package com.witalis.design.patterns.pattern.behavioral.visitor.content;
 
 import com.witalis.design.patterns.pattern.behavioral.visitor.content.object.*;
-import com.witalis.design.patterns.pattern.behavioral.visitor.content.visitor.CarVisitor;
-import com.witalis.design.patterns.pattern.behavioral.visitor.content.visitor.CruiseControlVisitor;
-import com.witalis.design.patterns.pattern.behavioral.visitor.content.visitor.TransmissionVisitor;
+import com.witalis.design.patterns.pattern.behavioral.visitor.content.visitor.*;
 
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.List;
 
 /**
  * Desc: Invoker visitor pattern
@@ -19,49 +19,48 @@ public class VisitorInvoker {
         log.info("\tVisitor: begin");
         long begin = System.nanoTime();
         try {
-            // car
-            Car audi = new Audi();
-            Car bmw = new Bmw();
-            Car mercedes = new Mercedes();
-            Car volkswagen = new Volkswagen();
+
+            log.info("");
 
             // visitor
-            CarVisitor cruiseControl = new CruiseControlVisitor();
-            CarVisitor transmission = new TransmissionVisitor();
+            DeviceVisitor accessory = new AccessoryVisitor();
+            DeviceVisitor software = new SoftwareVisitor();
+            var visitors = List.of(accessory, software);
 
             log.info("");
 
-            // audi
-            audi.drive();
-            audi.accept(cruiseControl);
-            audi.accept(transmission);
+            // laptop
+            Computer laptop = new Laptop("Super laptop");
+            log.info(laptop.toString());
+            scenario(laptop, visitors);
 
             log.info("");
 
-            // bmw
-            bmw.drive();
-            bmw.accept(cruiseControl);
-            bmw.accept(transmission);
+            // tablet
+            Computer tablet = new Tablet("Power tablet");
+            log.info(tablet.toString());
+            scenario(tablet, visitors);
 
             log.info("");
 
-            // mercedes
-            mercedes.drive();
-            mercedes.accept(cruiseControl);
-            mercedes.accept(transmission);
+            // mobile
+            Computer mobile = new Mobile("Cheap mobile");
+            log.info(mobile.toString());
+            scenario(mobile, visitors);
 
             log.info("");
 
-            // volkswagen
-            volkswagen.drive();
-            volkswagen.accept(cruiseControl);
-            volkswagen.accept(transmission);
-
-            log.info("");
         } catch (Exception e) {
             log.error("\tVisitor: errors, {}", e.getMessage());
         }
         long end = System.nanoTime();
         log.info("\tVisitor: end, time = {} ms", (end - begin) / 1000);
+    }
+
+    private void scenario(Computer device, List<DeviceVisitor> visitors) {
+        device.use();
+        for (DeviceVisitor visitor: visitors) {
+            device.accept(visitor);
+        }
     }
 }
