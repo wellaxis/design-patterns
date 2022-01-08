@@ -23,7 +23,7 @@ $ PATTERNS_HOME = [path]\design-patterns
 > within a given context in software design.
 
 `Creational` patterns
-> Creational patterns - provide the capability to create objects
+> Creational patterns - to provide the capability to create objects
 > based on a required criterion and in a controlled way.
 
 |                                         Name                                          | Description                                                                                                                                                                      |                                                   Practice                                                   |
@@ -39,11 +39,14 @@ $ PATTERNS_HOME = [path]\design-patterns
 |           [Object Pool](https://en.wikipedia.org/wiki/Object_pool_pattern)            | Avoid expensive acquisition and release of resources by recycling objects that are no longer in use.                                                                             |          [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/pool/ObjectPool.java)          |
 
 `Structural` patterns
+> Structural patterns - to ease the design by identifying a simple way
+> to realize relationships among entities.
 
 |                           Name                           | Description                                                                                                                                                                |                                          Practice                                          |
 |:--------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------:|
 |   [Proxy](https://en.wikipedia.org/wiki/Proxy_pattern)   | Provide a surrogate or placeholder for another object to control access to it.                                                                                             |   [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/proxy/Proxy.java)   |
 | [Adapter](https://en.wikipedia.org/wiki/Adapter_pattern) | Convert the interface of a class into another interface clients expect. An adapter lets classes work together that could not otherwise because of incompatible interfaces. | [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/adapter/Adapter.java) |
+|  [Bridge](https://en.wikipedia.org/wiki/Bridge_pattern)  | Decouple an abstraction from its implementation allowing the two to vary independently.                                                                                    |  [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/bridge/Bridge.java)  |
 
 `Behavioral` patterns
 
