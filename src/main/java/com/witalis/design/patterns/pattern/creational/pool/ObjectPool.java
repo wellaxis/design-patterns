@@ -1,31 +1,40 @@
-package com.witalis.design.patterns.pattern.creational.lazy;
+package com.witalis.design.patterns.pattern.creational.pool;
 
 import com.witalis.design.patterns.pattern.IPattern;
-import com.witalis.design.patterns.pattern.creational.lazy.content.LazyInitializationInvoker;
+import com.witalis.design.patterns.pattern.creational.pool.content.ObjectPoolInvoker;
 import com.witalis.design.patterns.utils.Classification;
 import com.witalis.design.patterns.utils.Pattern;
 
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Desc: Lazy initialization pattern
+ * Desc: Object pool pattern
  * User: Wellaxis
- * Date: 07.01.2022
+ * Date: 08.01.2022
  */
 @Slf4j
 @Pattern(
-    name = "Lazy Initialization",
+    name = "Object Pool",
     type = Classification.CREATIONAL
 )
-public class LazyInitialization implements IPattern {
+public class ObjectPool implements IPattern {
 
     /**
      * Definition:
      * -----------
-     * Lazy Initialization -> tactic of delaying the creation of an object,
-     *     the calculation of a value, or some other expensive process
-     *     until the first time it is needed. This pattern appears in the GoF catalog
-     *     as "virtual proxy", an implementation strategy for the Proxy pattern.
+     * Object Pool -> pattern can significantly improve system performance;
+     *     its use is most effective in situations where the creation of instances
+     *     of a certain class is expensive, objects in the system are created frequently,
+     *     but the number of objects created per unit of time is limited.
+     *
+     *     The main idea behind the Object Pool pattern is to avoid
+     *     creating new instances of a class if they can be reused.
+     *
+     *     Object pools (also known as resource pools) are used to manage object caching.
+     *     A client with access to an object pool can avoid creating new objects
+     *     by simply requesting an already created instance in the pool.
+     *     The pool of objects can be growing when, in the absence of free objects,
+     *     new objects are created, or with a limitation on the number of objects created.
      *
      * Algorithm:
      * ----------
@@ -48,7 +57,7 @@ public class LazyInitialization implements IPattern {
     @Override
     public void process() {
         log.info("=================== Pattern[lazy-initialization]: process =======");
-        var lazyInitialization = new LazyInitializationInvoker();
+        var lazyInitialization = new ObjectPoolInvoker();
         lazyInitialization.invoke();
         log.info("=================================================================");
     }
