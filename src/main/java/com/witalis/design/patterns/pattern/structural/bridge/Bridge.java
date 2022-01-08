@@ -26,22 +26,26 @@ public class Bridge implements IPattern {
      *     allowing the two to vary independently. Makes concrete classes
      *     independent of interface implementation classes.
      *
+     *     Changing functionality in one hierarchy does not entail changes in another.
+     *
      *     Goal: flexibility. It is possible to change
      *     interfaces and implementations independently.
      *
      * Algorithm:
      * ----------
-     * 1. To create a common interface for entities behaviour.
-     * 2. To create multiple entity implementations based on common interface.
-     * 3. To create an adapter interface to convert entities details.
-     * 4. To create an adapter implementation to convert entities details
+     * 1. To create abstraction interface for set of entities.
+     * 2. To create multiple refined abstraction entity implementations based on abstraction interface.
+     * 3. To create implementor interface for set of entities.
+     * 4. To create multiple concrete implementor entity implementations based on implementor interface.
+     * 5. To add bridge variable via composition to link two separate class hierarchies.
      *
      * Example:
      * --------
-     * 1. Entity interface -> Device { double getSpeed(); }
-     * 2. Entity classes -> [Laptop, Tablet, Mobile] { double getSpeed(); }
-     * 3. Adapter interface -> FrequencyAdapter { double getValue(); }
-     * 4. Adapter classes -> [Mega, Kilo, Hertz] { double getValue(); }
+     * 1. Abstraction interface -> Advertising { void promote(); }
+     * 2. Refined classes -> Advertiser [Internet, TV, Radio] { abstract void promoteDevice(); }
+     * 3. Implementor interface -> Device { void use(); }
+     * 4. Concrete classes -> Computer [Laptop, Tablet, Mobile] { void use(); }
+     * 5. Bridge variable -> Advertiser { protected Device device; }
      */
     @Override
     public void process() {
