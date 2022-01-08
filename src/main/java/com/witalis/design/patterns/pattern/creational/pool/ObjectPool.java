@@ -39,26 +39,22 @@ public class ObjectPool implements IPattern {
      * Algorithm:
      * ----------
      * 1. To create an entity interface with required methods.
-     * 2. To create an enumeration of all entity types.
-     * 3. To create an abstract class for multiple entities implementations.
-     * 4. To add memory map with all required entities (key - type, value - instance).
-     * 5. To set constructor as private to force the use of the factory method.
-     * 6. To add static factory method for lazy initialization & cache storing.
+     * 2. To create an entity implementation class.
+     * 3. To create an entity pool to manage entities life cycles.
+     * 4. To add methods to operate on entities (get & release).
      *
      * Example:
      * --------
      * 1. Entity interface -> Device { void use(); }
-     * 2. Entity enumeration -> DeviceType [Laptop, Tablet, Mobile]
-     * 3. Abstract class -> Computer [id, name, price, active]
-     * 4. Memory map -> Computer { devices = new ConcurrentHashMap<DeviceType, Device>(); }
-     * 5. Constructor -> private Computer(DeviceType type) {}
-     * 4. Factory method -> Computer { Device getDeviceByType(DeviceType type); }
+     * 2. Entity class -> Computer [id, name, active]
+     * 4. Entity pool -> ComputerPool { available = new HashMap<Device, Long>(); }
+     * 5. Pool methods -> ComputerPool { Device receive(); void release(Device device); }
      */
     @Override
     public void process() {
-        log.info("=================== Pattern[lazy-initialization]: process =======");
-        var lazyInitialization = new ObjectPoolInvoker();
-        lazyInitialization.invoke();
+        log.info("=================== Pattern[object-pool]: process ===============");
+        var objectPool = new ObjectPoolInvoker();
+        objectPool.invoke();
         log.info("=================================================================");
     }
 }
