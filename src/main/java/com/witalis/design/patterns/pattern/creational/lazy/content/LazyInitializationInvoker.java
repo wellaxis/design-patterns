@@ -19,7 +19,7 @@ public class LazyInitializationInvoker {
             Device device;
 
             log.info("");
-            Computer.showDevices();
+            Computer.statistics();
             log.info("");
 
             // laptop
@@ -32,7 +32,7 @@ public class LazyInitializationInvoker {
             scenario(DeviceType.LAPTOP, laptop);
 
             log.info("");
-            Computer.showDevices();
+            Computer.statistics();
             log.info("");
 
             // tablet
@@ -45,7 +45,7 @@ public class LazyInitializationInvoker {
             scenario(DeviceType.TABLET, tablet);
 
             log.info("");
-            Computer.showDevices();
+            Computer.statistics();
             log.info("");
 
             // mobile
@@ -58,7 +58,7 @@ public class LazyInitializationInvoker {
             scenario(DeviceType.MOBILE, mobile);
 
             log.info("");
-            Computer.showDevices();
+            Computer.statistics();
             log.info("");
 
         } catch (Exception e) {
