@@ -27,6 +27,12 @@ public class Composite implements IPattern {
      *     the same way as a single instance of the same type of object.
      *
      *     A single entity and a composite class implement a common interface.
+     *     Container classes leverage polymorphism to delegate to their containee objects.
+     *
+     *     All container and containee classes declare
+     *         an "is a" relationship to the interface.
+     *     All container classes declare
+     *         a one-to-many "has a" relationship to the interface.
      *
      *     The intent of a composite is to "compose" objects into tree structures
      *     to represent part-whole hierarchies. Implementing the composite pattern
