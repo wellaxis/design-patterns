@@ -1,6 +1,6 @@
 package com.witalis.design.patterns.pattern.structural.composite.content;
 
-import com.witalis.design.patterns.pattern.structural.composite.content.composite.ComputerClub;
+import com.witalis.design.patterns.pattern.structural.composite.content.composite.*;
 import com.witalis.design.patterns.pattern.structural.composite.content.object.*;
 
 import lombok.extern.slf4j.Slf4j;
