@@ -15,7 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Pattern(
     name = "Object Pool",
-    type = Classification.CREATIONAL
+    type = Classification.CREATIONAL,
+    isClassical = false
 )
 public class ObjectPool implements IPattern {
 

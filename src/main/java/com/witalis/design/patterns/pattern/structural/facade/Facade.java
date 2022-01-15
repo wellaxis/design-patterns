@@ -15,7 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Pattern(
     name = "Facade",
-    type = Classification.STRUCTURAL
+    type = Classification.STRUCTURAL,
+    isClassical = true
 )
 public class Facade implements IPattern {
 

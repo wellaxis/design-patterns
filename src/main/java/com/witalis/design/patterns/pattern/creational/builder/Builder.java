@@ -15,7 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Pattern(
     name = "Builder",
-    type = Classification.CREATIONAL
+    type = Classification.CREATIONAL,
+    isClassical = true
 )
 public class Builder implements IPattern {
 

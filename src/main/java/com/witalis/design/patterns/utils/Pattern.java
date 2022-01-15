@@ -13,4 +13,5 @@ import java.lang.annotation.Target;
 public @interface Pattern {
     String name();
     Classification type();
+    boolean isClassical();
 }

@@ -15,7 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Pattern(
     name = "State",
-    type = Classification.BEHAVIORAL
+    type = Classification.BEHAVIORAL,
+    isClassical = true
 )
 public class State implements IPattern {
 

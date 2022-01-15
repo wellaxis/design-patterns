@@ -15,7 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Pattern(
     name = "Visitor",
-    type = Classification.BEHAVIORAL
+    type = Classification.BEHAVIORAL,
+    isClassical = true
 )
 public class Visitor implements IPattern {
 
