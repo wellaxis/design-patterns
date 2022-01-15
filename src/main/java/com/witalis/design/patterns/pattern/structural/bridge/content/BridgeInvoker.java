@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Desc: Invoker bridge class
  * User: Wellaxis
- * Date: 09.12.2021
+ * Date: 09.01.2022
  */
 @Slf4j
 public class BridgeInvoker {

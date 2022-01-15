@@ -51,6 +51,7 @@ $ PATTERNS_HOME = [path]\design-patterns
 | [Composite](https://en.wikipedia.org/wiki/Composite_pattern) | Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.              | [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/composite/Composite.java) |
 | [Decorator](https://en.wikipedia.org/wiki/Decorator_pattern) | Attach additional responsibilities to an object dynamically keeping the same interface. Decorators provide a flexible alternative to subclassing for extending functionality. | [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/decorator/Decorator.java) |
 | [Flyweight](https://en.wikipedia.org/wiki/Flyweight_pattern) | Use sharing to support large numbers of similar objects efficiently.                                                                                                          | [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/flyweight/Flyweight.java) |
+|      [Twin](https://en.wikipedia.org/wiki/Twin_pattern)      | Twin allows modeling of multiple inheritance in programming languages that do not support this feature.                                                                       |      [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/twin/Twin.java)      |
 
 `Behavioral` patterns
 

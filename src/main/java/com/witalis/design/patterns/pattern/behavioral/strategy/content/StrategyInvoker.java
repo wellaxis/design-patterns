@@ -5,6 +5,7 @@ import com.witalis.design.patterns.pattern.behavioral.strategy.content.strategy.
 
 import lombok.extern.slf4j.Slf4j;
 
+
 /**
  * Desc: Invoker strategy pattern
  * User: Wellaxis
