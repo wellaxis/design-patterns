@@ -61,6 +61,7 @@ $ PATTERNS_HOME = [path]\design-patterns
 |   1 |  [Visitor](https://en.wikipedia.org/wiki/Visitor_pattern)  | Represent an operation to be performed on instances of a set of classes. Visitor lets a new operation be defined without changing the classes of the elements on which it operates. |  [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/visitor/Visitor.java)  |
 |   2 | [Strategy](https://en.wikipedia.org/wiki/Strategy_pattern) | Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.                        | [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/strategy/Strategy.java) |
 |   3 |    [State](https://en.wikipedia.org/wiki/State_pattern)    | Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.                                                                  |    [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/state/State.java)    |
+|   4 |  [Memento](https://en.wikipedia.org/wiki/Memento_pattern)  | Without violating encapsulation, capture and externalize an object's internal state allowing the object to be restored to this state later.                                         |  [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/memento/Memento.java)  |
 
 `Concurrency` patterns
 
