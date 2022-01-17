@@ -23,7 +23,7 @@ $ PATTERNS_HOME = [path]\design-patterns
 > within a given context in software design.
 
 `Creational` patterns
-> Creational patterns - to provide the capability to create objects
+> Creational design patterns - to provide the capability to create objects
 > based on a required criterion and in a controlled way.
 
 |  ID |                                         Name                                          | Description                                                                                                                                                                      |                                                   Practice                                                   |
@@ -39,7 +39,7 @@ $ PATTERNS_HOME = [path]\design-patterns
 |   9 |           [Object Pool](https://en.wikipedia.org/wiki/Object_pool_pattern)            | Avoid expensive acquisition and release of resources by recycling objects that are no longer in use.                                                                             |          [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/pool/ObjectPool.java)          |
 
 `Structural` patterns
-> Structural patterns - to ease the design by identifying a simple way
+> Structural design patterns - to ease the design by identifying a simple way
 > to realize relationships among entities.
 
 |  ID |                               Name                               | Description                                                                                                                                                                   |                                            Practice                                            |
@@ -55,6 +55,8 @@ $ PATTERNS_HOME = [path]\design-patterns
 |   9 | [Marker](https://en.wikipedia.org/wiki/Marker_interface_pattern) | Empty interface to associate metadata with a class.                                                                                                                           |    [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/marker/Marker.java)    |
 
 `Behavioral` patterns
+> Behavioral design patterns  - to identify common communication patterns among objects.
+> By doing so, these patterns increase flexibility in carrying out communication.
 
 |  ID |                            Name                            | Description                                                                                                                                                                         |                                           Practice                                           |
 |----:|:----------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------:|
