@@ -6,7 +6,7 @@ package com.witalis.design.patterns.pattern.creational.singleton.content.singlet
  * Date: 07.01.2022
  */
 public class DoubleCheckedLockingSingleton {
-    private static DoubleCheckedLockingSingleton instance;
+    private static volatile DoubleCheckedLockingSingleton instance;
 
     private DoubleCheckedLockingSingleton() {
     }
