@@ -57,7 +57,7 @@ public class Interpreter implements IPattern {
      */
     @Override
     public void process() {
-        log.info("=================== Pattern[interpreter]: process ==================");
+        log.info("=================== Pattern[interpreter]: process ===============");
         var interpreter = new InterpreterInvoker();
         interpreter.invoke();
         log.info("=================================================================");
