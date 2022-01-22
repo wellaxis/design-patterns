@@ -4,7 +4,7 @@ import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Desc:
+ * Desc: Terminal Expression
  * User: Wellaxis
  * Date: 22.01.2022
  */

@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.List;
 
 /**
- * Desc: Non Terminal Expression- Any
+ * Desc: Non Terminal Expression - Any
  * User: Wellaxis
  * Date: 22.01.2022
  */

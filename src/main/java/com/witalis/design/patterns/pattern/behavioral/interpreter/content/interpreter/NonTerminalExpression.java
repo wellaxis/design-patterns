@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Desc:
+ * Desc: Non Terminal Expression
  * User: Wellaxis
  * Date: 22.01.2022
  */
