@@ -1,7 +1,5 @@
 package com.witalis.design.patterns.pattern.behavioral.specification.content.specification;
 
-import com.witalis.design.patterns.pattern.behavioral.specification.content.object.Device;
-
 import java.util.List;
 
 /**
@@ -10,9 +8,6 @@ import java.util.List;
  * Date: 23.01.2022
  */
 public abstract class CompositeSpecification implements Specifiable {
-
-    @Override
-    public abstract boolean specify(Device device);
 
     public CompositeSpecification and(CompositeSpecification specification) {
         return new ConjunctionSpecification(List.of(this, specification));

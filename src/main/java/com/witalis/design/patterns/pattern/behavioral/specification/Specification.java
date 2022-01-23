@@ -23,37 +23,36 @@ public class Specification implements IPattern {
     /**
      * Definition:
      * -----------
-     * Specification -> specifies how to evaluate sentences in a language.
-     *     The basic idea is to have a class for each symbol (terminal or non-terminal)
-     *     in a specialized computer language. The syntax tree of a sentence in the language
-     *     is an instance of the composite pattern and is used to evaluate (interpret)
-     *     the sentence for a client.
+     * Specification -> business rules can be recombined by chaining the business rules
+     *     together using boolean logic. A specification pattern outlines
+     *     a business rule that is combinable with other business rules.
+     *     The pattern is frequently used in the context of domain-driven design.
      *
-     *     The client class refers to the common abstract expression interface
-     *     for interpreting an expression interpret(context).
+     *     As a consequence of performing runtime composition of high-level business/domain
+     *     logic, the Specification pattern is a convenient tool for converting ad-hoc user
+     *     search criteria into low level logic to be processed by repositories.
      *
-     *     The terminal expression class has no children and interprets an expression directly.
-     *
-     *     The non-terminal expression class maintains a container of child expressions
-     *     (expressions) and forwards interpret requests to these expressions.
+     *     Since a specification is an encapsulation of logic in a reusable form
+     *     it is very simple to thoroughly unit test, and when used
+     *     in this context is also an implementation of the humble object pattern.
      *
      * Algorithm:
      * ----------
      * 1. To create a common interface for set of entities.
      * 2. To create implementation classes based on common interface.
-     * 3. To create a context class to process interpreting expressions.
-     * 4. To create expression interface for interpreting context expressions.
-     * 5. To create terminal & non-terminal implementations of expression interface.
-     * 6. To add the specification method to expression interface and its realizations.
+     * 3. To create a specification interface for using boolean logic.
+     * 4. To create implementation classes based on specification interface.
+     * 5. To add composite methods to aggregate specification class.
+     * 6. To implement specification methods as business rules using boolean logic.
      *
      * Example:
      * --------
-     * 1. Entity interface -> Device { void use(); }
-     * 2. Entity classes -> Computer [Laptop, Mobile, Tablet], { void use(); }
-     * 3. Context class -> Context { String name; List<String> characteristics; }
-     * 4. Expression interface -> Expression { boolean interpret(Context context); }
-     * 5. Expression classes -> Terminal [Brief, Hashtag, Holder] & Non-Terminal [All, Any, None]
-     * 6. Specification method -> Expression { @Override boolean interpret(Context context); }
+     * 1. Entity interface -> Device { void use(); etc. }
+     * 2. Entity classes -> Computer [Laptop, Mobile, Tablet], { void use(); etc. }
+     * 3. Specification interface -> Specifiable { boolean specify(Device device); }
+     * 4. Specification classes -> CompositeSpecification [Type, Size, LessCore, LowerPrice, etc.]
+     * 5. Composite methods -> CompositeSpecification { and(), or(), not() }
+     * 6. Specification methods -> SizeSpecification { @Override boolean specify(Device device); }
      */
     @Override
     public void process() {
