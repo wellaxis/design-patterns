@@ -58,7 +58,7 @@ public class Command implements IPattern {
      * 3. Command interface -> Command { void execute(); }
      * 4. Command classes -> DeviceCommand [TurnOn, TurnOff, InstallDriver] { void execute(); }
      * 5. Invoker interface -> Invoker { void execute(String commandName); }
-     * 6. Invoker classes -> DeviceOwner { @Override public void execute(String commandName); }
+     * 6. Invoker classes -> DeviceOwner { public void execute(String commandName); }
      * 7. Command method -> TurnOnCommand { @Override execute() { getDevice().turnOn(); } }
      * 8. Invoker method -> DeviceOwner { @Override public void execute(String commandName); }
      * 9. Receiver methods -> Computer { @Override turnOn(), turnOff(), installDriver(); }
