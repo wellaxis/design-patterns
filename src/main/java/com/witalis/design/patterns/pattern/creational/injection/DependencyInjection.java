@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Desc: Dependency injection pattern
  * User: Wellaxis
- * Date: 22.01.2022
+ * Date: 24.01.2022
  */
 @Slf4j
 @Pattern(

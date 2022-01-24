@@ -4,7 +4,13 @@ Goal of project
 ---------------
 
 > It is necessary to practice writing (realize & develop) 
-> the different [design patterns][patterns] in examples.
+> the different [design patterns][patterns] in examples:
+- Creational design patterns
+- Structural design patterns
+- Behavioral design patterns
+- Concurrency design patterns
+- Architectural design patterns
+- Anti design patterns
 ***
 
 Installation
@@ -17,10 +23,22 @@ $ PATTERNS_HOME = [path]\design-patterns
 ```
 ***
 
+## Benefits
+
+> The main benefits from using design patterns are the following:
+> 1. They are proven solutions
+> 2. They are easily reusable
+> 3. They are expressive
+> 4. They ease communication
+> 5. They prevent the need for refactoring code
+> 6. They lower the size of the codebase
+***
+
 ## Patterns
 > Software design pattern is a general,
 > reusable solution to a commonly occurring problem
 > within a given context in software design.
+***
 
 `Creational` patterns
 > Creational design patterns - to provide the capability to create objects
@@ -38,6 +56,7 @@ $ PATTERNS_HOME = [path]\design-patterns
 |   8 |       [Lazy Initialization](https://en.wikipedia.org/wiki/Lazy_initialization)        | Tactic of delaying the creation of an object, the calculation of a value, or some other expensive process until the first time it is needed.                                     |      [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/lazy/LazyInitialization.java)      |
 |   9 |           [Object Pool](https://en.wikipedia.org/wiki/Object_pool_pattern)            | Avoid expensive acquisition and release of resources by recycling objects that are no longer in use.                                                                             |          [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/pool/ObjectPool.java)          |
 |  10 |      [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection)       | A class accepts the objects it requires from an injector instead of creating the objects directly.                                                                               |   [Java](/src/main/java/com/witalis/design/patterns/pattern/creational/injection/DependencyInjection.java)   |
+***
 
 `Structural` patterns
 > Structural design patterns - to ease the design by identifying a simple way
@@ -55,9 +74,10 @@ $ PATTERNS_HOME = [path]\design-patterns
 |   8 |             [Twin](https://en.wikipedia.org/wiki/Twin_pattern)             | Twin allows modeling of multiple inheritance in programming languages that do not support this feature.                                                                       |       [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/twin/Twin.java)       |
 |   9 |      [Marker](https://en.wikipedia.org/wiki/Marker_interface_pattern)      | Empty interface to associate metadata with a class.                                                                                                                           |     [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/marker/Marker.java)     |
 |  10 | [Private Class Data](https://handwiki.org/wiki/Private_class_data_pattern) | Using to encapsulate class attributes and their manipulation.                                                                                                                 | [Java](/src/main/java/com/witalis/design/patterns/pattern/structural/data/PrivateClassData.java) |
+***
 
 `Behavioral` patterns
-> Behavioral design patterns  - to identify common communication patterns among objects.
+> Behavioral design patterns - to identify common communication patterns among objects.
 > By doing so, these patterns increase flexibility in carrying out communication.
 
 |  ID |                                           Name                                           | Description                                                                                                                                                                                                        |                                                Practice                                                |
@@ -77,8 +97,31 @@ $ PATTERNS_HOME = [path]\design-patterns
 |  13 |           [Specification](https://en.wikipedia.org/wiki/Specification_pattern)           | Recombinable business logic in a Boolean fashion.                                                                                                                                                                  | [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/specification/Specification.java) |
 |  14 |            [Servant](https://en.wikipedia.org/wiki/Servant_(design_pattern))             | Define common functionality for a group of classes. The servant pattern is also frequently called helper class or utility class implementation for a given set of classes.                                         |       [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/servant/Servant.java)       |
 |  15 |         [Blackboard](https://en.wikipedia.org/wiki/Blackboard_(design_pattern))          | Provide a computational framework for the design and implementation of systems that integrate large and diverse specialized modules, and implement complex, non-deterministic control strategies.                  |    [Java](/src/main/java/com/witalis/design/patterns/pattern/behavioral/blackboard/Blackboard.java)    |
+***
 
 `Concurrency` patterns
+> Concurrency design patterns - are deal with the multithreaded programming paradigm.
+
+|  ID |                                           Name                                           | Description                                                                                                                                                                                                        |
+|----:|:----------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   1 |               [Active Object](https://en.wikipedia.org/wiki/Active_object)               | Decouples method execution from method invocation that reside in their own thread of control. The goal is to introduce concurrency, by using asynchronous method invocation and a scheduler for handling requests. |
+|   2 |             [Balking pattern](https://en.wikipedia.org/wiki/Balking_pattern)             | Only execute an action on an object when the object is in a particular state.                                                                                                                                      |
+|   3 |           [Barrier](https://en.wikipedia.org/wiki/Barrier_(computer_science))            | A barrier for a group of threads or processes in the source code means any thread/process must stop at this point and cannot proceed until all other threads/processes reach this barrier.                         |
+|   4 |      [Double-checked locking](https://en.wikipedia.org/wiki/Double-checked_locking)      | Reduce the overhead of acquiring a lock by first testing the locking criterion (the 'lock hint') in an unsafe manner; only if that succeeds does the actual locking logic proceed.                                 |
+|   5 |          [Guarded suspension](https://en.wikipedia.org/wiki/Guarded_suspension)          | Manages operations that require both a lock to be acquired and a precondition to be satisfied before the operation can be executed.                                                                                |
+|   6 |        [Monitor Object](https://en.wikipedia.org/wiki/Monitor_(synchronization))         | An object whose methods are subject to mutual exclusion, thus preventing multiple objects from erroneously trying to use it at the same time.                                                                      |
+|   7 |                 [Reactor](https://en.wikipedia.org/wiki/Reactor_pattern)                 | A reactor object provides an asynchronous interface to resources that must be handled synchronously.                                                                                                               |
+|   8 |       [Read-write lock](https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock)       | Allows concurrent read access to an object, but requires exclusive access for write operations. An underlying semaphore might be used for writing, and a Copy-on-write mechanism may or may not be used.           |
+|   9 |            [Scheduler](https://en.wikipedia.org/wiki/Scheduling_(computing))             | Explicitly control when threads may execute single-threaded code.                                                                                                                                                  |
+|  10 |                 [Thread pool](https://en.wikipedia.org/wiki/Thread_pool)                 | A number of threads are created to perform a number of tasks, which are usually organized in a queue. Typically, there are many more tasks than threads.                                                           |
+|  11 |        [Thread-local storage](https://en.wikipedia.org/wiki/Thread-local_storage)        | A computer programming method that uses static or global memory local to a thread (TLS).                                                                                                                           |
+|  12 |                    [Join](https://en.wikipedia.org/wiki/Join-pattern)                    | Join-pattern provides a way to write concurrent, parallel and distributed programs by message passing. Compared to the use of threads and locks, this is a high-level programming model.                           |
+|  13 |              [Lock](https://en.wikipedia.org/wiki/Lock_(computer_science))               | One thread puts a "lock" on a resource, preventing other threads from accessing or modifying it.                                                                                                                   |
+|  14 |               [Messaging](https://en.wikipedia.org/wiki/Messaging_pattern)               | Allows the interchange of information (i.e. messages) between components and applications.                                                                                                                         |
+|  15 | [Event-based asynchronous](https://en.wikipedia.org/wiki/Asynchronous_method_invocation) | Addresses problems with the asynchronous pattern that occur in multithreaded programs.                                                                                                                             |
+***
+
+`Architectural` patterns
 
 `Anti` patterns
 
