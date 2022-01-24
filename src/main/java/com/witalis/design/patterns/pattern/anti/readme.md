@@ -1,8 +1,8 @@
-## Anti Patterns
+## Anti Design Patterns
 ***
 
 `Anti` patterns
-> Anti-patterns - common responses to a recurring problems that are usually ineffective
+> **Anti-patterns** - common responses to a recurring problems that are usually ineffective
 > and risks being highly counterproductive.
 
 ***
