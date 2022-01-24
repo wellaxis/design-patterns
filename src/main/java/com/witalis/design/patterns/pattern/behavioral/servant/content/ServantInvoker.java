@@ -61,7 +61,7 @@ public class ServantInvoker {
     private void scenario(Computer device, Session session, Map<String, Object> params) {
         if (device == null || session == null) return;
 
-        boolean force = (boolean) params.getOrDefault("false", false);
+        boolean force = (boolean) params.getOrDefault("force", false);
         String token = (String) params.get("token");
 
         log.info("\t=========== Scenario:");
