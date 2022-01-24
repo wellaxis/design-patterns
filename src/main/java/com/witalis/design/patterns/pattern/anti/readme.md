@@ -1,9 +1,11 @@
 ## Anti Patterns
 ***
+
 `Anti` patterns
 > Anti-patterns - common responses to a recurring problems that are usually ineffective
 > and risks being highly counterproductive.
 
+***
 |  ID |                                          Name                                          | Description                                                                                                                                                   |
 |----:|:--------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   1 |                 [Hard code](https://en.wikipedia.org/wiki/Hard_coding)                 | Embedding assumptions about the environment of a system in its implementation.                                                                                |
