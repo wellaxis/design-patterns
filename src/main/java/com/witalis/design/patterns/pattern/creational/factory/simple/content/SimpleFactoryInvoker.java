@@ -1,15 +1,14 @@
 package com.witalis.design.patterns.pattern.creational.factory.simple.content;
 
+import com.witalis.design.patterns.pattern.creational.factory.simple.content.factory.*;
 import com.witalis.design.patterns.pattern.creational.factory.simple.content.object.*;
-import com.witalis.design.patterns.pattern.creational.factory.simple.content.object.coffee.CoffeeType;
-import com.witalis.design.patterns.pattern.creational.factory.simple.content.object.coffee.ICoffee;
 
 import lombok.extern.slf4j.Slf4j;
 
 /**
  * Desc: Invoker simple factory pattern
  * User: Wellaxis
- * Date: 28.12.2021
+ * Date: 25.01.2022
  */
 @Slf4j
 public class SimpleFactoryInvoker {
@@ -18,35 +17,30 @@ public class SimpleFactoryInvoker {
         log.info("\tSimple Factory: begin");
         long begin = System.nanoTime();
         try {
+
             // shop
-            ICoffeeShop shop = new CoffeeShop();
+            DeviceShop shop = new ComputerShop();
 
-            // coffee
-            ICoffee coffee;
-
-            log.info("");
-
-            // the 1st cup
-            coffee = shop.orderCoffee(CoffeeType.ESPRESSO);
-            log.info("*** The 1st cup: {}", coffee);
+            // device
+            Device device;
 
             log.info("");
 
-            // the 2nd cup
-            coffee = shop.orderCoffee(CoffeeType.AMERICANO);
-            log.info("*** The 2nd cup: {}", coffee);
+            // the 1st order
+            device = shop.order(DeviceType.LAPTOP);
+            scenario(device, "1st");
 
             log.info("");
 
-            // the 3rd cup
-            coffee = shop.orderCoffee(CoffeeType.CAPPUCCINO);
-            log.info("*** The 3rd cup: {}", coffee);
+            // the 2nd order
+            device = shop.order(DeviceType.TABLET);
+            scenario(device, "2nd");
 
             log.info("");
 
-            // the 4th cup
-            coffee = shop.orderCoffee(CoffeeType.LATTE);
-            log.info("*** The 4th cup: {}", coffee);
+            // the 3rd order
+            device = shop.order(DeviceType.MOBILE);
+            scenario(device, "3rd");
 
             log.info("");
 
@@ -55,5 +49,14 @@ public class SimpleFactoryInvoker {
         }
         long end = System.nanoTime();
         log.info("\tSimple Factory: end, time = {} ms", (end - begin) / 1000);
+    }
+
+    private void scenario(Device device, String information) {
+        log.info(
+            "\t*** The {} device: {}",
+            information,
+            device.getClass().getSimpleName().toLowerCase()
+        );
+        log.info("\t=== Information: {}", device);
     }
 }

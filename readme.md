@@ -35,7 +35,7 @@ $ PATTERNS_HOME = [path]\design-patterns
 ***
 
 ## Patterns
-> Software design pattern is a general, reusable solution
+> **Software design pattern** - is a general, reusable solution
 > to a commonly occurring problem within a given context in software design.
 
 |                                            Name                                             | Description                                                                                                                           |

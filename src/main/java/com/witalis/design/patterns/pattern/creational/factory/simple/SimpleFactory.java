@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Desc: Simple factory pattern
  * User: Wellaxis
- * Date: 28.12.2021
+ * Date: 25.01.2022
  */
 @Slf4j
 @Pattern(
@@ -35,9 +35,9 @@ public class SimpleFactory implements IPattern {
      *
      * Example:
      * --------
-     * 1. Enumeration -> CoffeeType [Americano, Cappuccino, Espresso, Latte]
-     * 2. Simple factory -> CoffeeFactory
-     * 3. Static method -> create(CoffeeType type)
+     * 1. Enumeration -> DeviceType [Laptop, Tablet, Mobile, etc.]
+     * 2. Simple factory -> DeviceFactory
+     * 3. Static method -> public static Device create(DeviceType type);
      */
     @Override
     public void process() {
