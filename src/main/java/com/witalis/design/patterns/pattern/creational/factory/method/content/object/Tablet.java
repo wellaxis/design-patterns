@@ -1,4 +1,4 @@
-package com.witalis.design.patterns.pattern.creational.factory.simple.content.object;
+package com.witalis.design.patterns.pattern.creational.factory.method.content.object;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Desc: Tablet device
  * User: Wellaxis
- * Date: 28.12.2021
+ * Date: 30.12.2021
  */
 @Slf4j
 @Data

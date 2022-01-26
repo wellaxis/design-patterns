@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Desc: Computer shop
  * User: Wellaxis
- * Date: 25.01.2022
+ * Date: 28.12.2021
  */
 @Slf4j
 public class ComputerShop implements DeviceShop {

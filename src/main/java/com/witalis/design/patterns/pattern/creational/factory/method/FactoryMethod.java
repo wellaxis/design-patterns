@@ -36,10 +36,10 @@ public class FactoryMethod implements IPattern {
      *
      * Example:
      * --------
-     * 1. Enumeration -> CoffeeType [Americano, Cappuccino, Espresso, Latte]
-     * 2. Abstract factory -> CoffeeShop (abstract class)
-     * 3. Abstract method -> createCoffee(CoffeeType type)
-     * 4. Derived factories -> Alcoholic, Classic, Exotic, Instant coffee shops
+     * 1. Enumeration -> DeviceType [Laptop, Tablet, Mobile, etc.]
+     * 2. Abstract factory -> ComputerShop (abstract class) implements DeviceShop
+     * 3. Abstract method -> ComputerShop { abstract Device create(DeviceType type); }
+     * 4. Derived factories -> ComputerShop [Business, Everyday, Prestige, etc.]
      */
     @Override
     public void process() {

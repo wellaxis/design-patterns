@@ -2,7 +2,6 @@ package com.witalis.design.patterns.pattern.creational.factory.method.content;
 
 import com.witalis.design.patterns.pattern.creational.factory.method.content.factory.*;
 import com.witalis.design.patterns.pattern.creational.factory.method.content.object.*;
-import com.witalis.design.patterns.pattern.creational.factory.method.content.object.coffee.*;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,38 +18,31 @@ public class FactoryMethodInvoker {
         long begin = System.nanoTime();
         try {
             // shop
-            ICoffeeShop shop;
+            DeviceShop shop;
 
-            // coffee
-            ICoffee coffee;
-
-            log.info("");
-
-            // the 1st cup
-            shop = new ClassicCoffeeShop();
-            coffee = shop.orderCoffee(CoffeeType.ESPRESSO);
-            log.info("*** The 1st cup: {}", coffee);
+            // device
+            Device device;
 
             log.info("");
 
-            // the 2nd cup
-            shop = new ExoticCoffeeShop();
-            coffee = shop.orderCoffee(CoffeeType.AMERICANO);
-            log.info("*** The 2nd cup: {}", coffee);
+            // the 1st order
+            shop = new BusinessShop();
+            device = shop.order(DeviceType.LAPTOP);
+            scenario(device, "1st");
 
             log.info("");
 
-            // the 3rd cup
-            shop = new AlcoholicCoffeeShop();
-            coffee = shop.orderCoffee(CoffeeType.CAPPUCCINO);
-            log.info("*** The 3rd cup: {}", coffee);
+            // the 2nd order
+            shop = new EverydayShop();
+            device = shop.order(DeviceType.TABLET);
+            scenario(device, "2nd");
 
             log.info("");
 
-            // the 4th cup
-            shop = new InstantCoffeeShop();
-            coffee = shop.orderCoffee(CoffeeType.LATTE);
-            log.info("*** The 4th cup: {}", coffee);
+            // the 3rd order
+            shop = new PrestigeShop();
+            device = shop.order(DeviceType.MOBILE);
+            scenario(device, "3rd");
 
             log.info("");
 
@@ -59,5 +51,14 @@ public class FactoryMethodInvoker {
         }
         long end = System.nanoTime();
         log.info("\tFactory Method: end, time = {} ms", (end - begin) / 1000);
+    }
+
+    private void scenario(Device device, String information) {
+        log.info(
+            "\t*** The {} device: {}",
+            information,
+            device.getClass().getSimpleName().toLowerCase()
+        );
+        log.info("\t=== Information: {}", device);
     }
 }

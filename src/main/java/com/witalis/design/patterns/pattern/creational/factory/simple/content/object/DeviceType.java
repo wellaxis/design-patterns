@@ -3,7 +3,7 @@ package com.witalis.design.patterns.pattern.creational.factory.simple.content.ob
 /**
  * Desc: Device enumeration
  * User: Wellaxis
- * Date: 25.01.2022
+ * Date: 28.12.2021
  */
 public enum DeviceType {
     LAPTOP,
