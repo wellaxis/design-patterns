@@ -1,20 +1,26 @@
 package com.witalis.design.patterns.pattern.creational.factory.abstracts.content.object.coffee;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Desc: Cappuccino coffee class
+ * Desc: Cappuccino realCoffee class
  * User: Wellaxis
  * Date: 31.12.2021
  */
 @Slf4j
-public final class Cappuccino extends Coffee {
+@Data
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+public final class Cappuccino extends BaseCoffee {
     public static final String DEF_NAME = "Cappuccino coffee";
     public static final boolean DEF_HAS_MILK = true;
     public static final double DEF_PRICE = 5.5;
     public static final String DEF_NOTES =
         """
-        An espresso-based coffee drink that originated in Austria with later development \
+        An espresso-based realCoffee drink that originated in Austria with later development \
         taking place in Italy, and is prepared with steamed milk foam (micro-foam).""";
 
     public Cappuccino() {
@@ -27,11 +33,11 @@ public final class Cappuccino extends Coffee {
 
     @Override
     public void milk() {
-        log.info("Need a little of milk");
+        log.info("\t# Need a little of milk");
     }
 
     @Override
     public void make() {
-        log.info("Add the warmed and steam-foamed milk to one shot of espresso.");
+        log.info("\t# Add the warmed and steam-foamed milk to one shot of espresso.");
     }
 }

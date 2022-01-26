@@ -36,14 +36,14 @@ public class AbstractFactory implements IPattern {
      *
      * Example:
      * --------
-     * 1. Enumerations -> CoffeeType [Americano, etc.], TeaType [Black, etc.]
-     * 2. Abstract factory -> Cafe (abstract class)
-     * 3. Abstract methods -> createCoffee(CoffeeType type), createTea(TeaType type)
-     * 4. Derived factories -> Alcoholic, Classic, Exotic, Instant caffs
+     * 1. Enumerations -> DeviceType [Laptop, etc.], CoffeeType [Latte, etc.]
+     * 2. Abstract factory -> BaseShop (abstract class) implements Shop
+     * 3. Abstract methods -> createDevice(DeviceType type), createCoffee(CoffeeType type)
+     * 4. Derived factories -> BaseShop [Business, Everyday, Prestige, etc.]
      */
     @Override
     public void process() {
-        log.info("=================== Pattern[abstract-factory]: process ============");
+        log.info("=================== Pattern[abstract-factory]: process ==========");
         var abstractFactory = new AbstractFactoryInvoker();
         abstractFactory.invoke();
         log.info("=================================================================");

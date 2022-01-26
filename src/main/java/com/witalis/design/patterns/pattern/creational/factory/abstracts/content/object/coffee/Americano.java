@@ -1,5 +1,8 @@
 package com.witalis.design.patterns.pattern.creational.factory.abstracts.content.object.coffee;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -8,7 +11,10 @@ import lombok.extern.slf4j.Slf4j;
  * Date: 31.12.2021
  */
 @Slf4j
-public final class Americano extends Coffee {
+@Data
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+public final class Americano extends BaseCoffee {
     public static final String DEF_NAME = "Americano coffee";
     public static final boolean DEF_HAS_MILK = false;
     public static final double DEF_PRICE = 3.0;
@@ -27,11 +33,11 @@ public final class Americano extends Coffee {
 
     @Override
     public void milk() {
-        log.info("No need to add milk");
+        log.info("\t# No need to add milk");
     }
 
     @Override
     public void make() {
-        log.info("Add single or double shot of espresso brewed with added hot water.");
+        log.info("\t# Add single or double shot of espresso brewed with added hot water.");
     }
 }

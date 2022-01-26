@@ -1,8 +1,8 @@
 package com.witalis.design.patterns.pattern.creational.factory.abstracts.content;
 
-import com.witalis.design.patterns.pattern.creational.factory.abstracts.content.object.*;
+import com.witalis.design.patterns.pattern.creational.factory.abstracts.content.factory.*;
 import com.witalis.design.patterns.pattern.creational.factory.abstracts.content.object.coffee.*;
-import com.witalis.design.patterns.pattern.creational.factory.abstracts.content.object.tea.*;
+import com.witalis.design.patterns.pattern.creational.factory.abstracts.content.object.device.*;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,48 +20,35 @@ public class AbstractFactoryInvoker {
         log.info("\tAbstract Factory: begin");
         long begin = System.nanoTime();
         try {
-            // cafe
-            ICafe cafe;
-
-            // coffee
-            Coffee coffee;
-            // tea
-            Tea tea;
 
             log.info("");
 
-            // the 1st cafe
-            invoke(
-                CafeStyle.CLASSIC,
-                CoffeeType.AMERICANO,
-                TeaType.BLACK
+            // the 1st order
+            scenario(
+                ShopRank.WORK,
+                "Business Ltd",
+                DeviceType.LAPTOP,
+                CoffeeType.AMERICANO
             );
 
             log.info("");
 
-            // the 2nd cafe
-            invoke(
-                CafeStyle.EXOTIC,
-                CoffeeType.ESPRESSO,
-                TeaType.WHITE
+            // the 2nd order
+            scenario(
+                ShopRank.HOME,
+                "Alone Market",
+                DeviceType.MOBILE,
+                CoffeeType.CAPPUCCINO
             );
 
             log.info("");
 
-            // the 3rd cafe
-            invoke(
-                CafeStyle.ALCOHOLIC,
-                CoffeeType.LATTE,
-                TeaType.GREEN
-            );
-
-            log.info("");
-
-            // the 4th cafe
-            invoke(
-                CafeStyle.INSTANT,
-                CoffeeType.CAPPUCCINO,
-                TeaType.PURPLE
+            // the 3rd order
+            scenario(
+                ShopRank.GAME,
+                "A Lux Choice",
+                DeviceType.TABLET,
+                CoffeeType.LATTE
             );
 
             log.info("");
@@ -73,26 +60,35 @@ public class AbstractFactoryInvoker {
         log.info("\tAbstract Factory: end, time = {} ms", (end - begin) / 1000);
     }
 
-    private void invoke(CafeStyle cafeStyle, CoffeeType coffeeType, TeaType teaType) {
-        var style = cafeStyle.name().toLowerCase();
+    private void scenario(ShopRank shopRank, String shopName, DeviceType deviceType, CoffeeType coffeeType) {
+        final var delimiter = "\t=======================================================";
+        final var currency = NumberFormat.getCurrencyInstance();
+        final var rank = shopRank.name().toLowerCase();
 
-        log.info("*** The {} cafe", style);
-        Cafe cafe = Cafe.create(cafeStyle);
+        log.info(delimiter);
+        log.info("\t=============== The '{}' shop ===============", shopName);
+        log.info(delimiter);
 
-        log.info("=== Order coffee...");
-        Coffee coffee = cafe.orderCoffee(coffeeType);
+        Shop shop = ShopUtils.create(shopRank, shopName);
 
-        log.info("=== Order tea...");
-        Tea tea = cafe.orderTea(teaType);
+        log.info("\t=== Order[1]: {} device...", deviceType.name().toLowerCase());
+        Device device = shop.orderDevice(deviceType);
+        log.info("\t--- The device box: {}", device);
+        var devicePrice = ((Computer) device).getPrice();
 
-        log.info("--- The cup of coffee: {}", coffee);
-        log.info("--- The cup of tea: {}", tea);
+        log.info("");
 
-        var currency = NumberFormat.getCurrencyInstance();
+        log.info("\t=== Order[2]: {} coffee...", coffeeType.name().toLowerCase());
+        Coffee coffee = shop.orderCoffee(coffeeType);
+        log.info("\t--- The coffee cup: {}", coffee);
+        var coffeePrice = ((BaseCoffee) coffee).getPrice();
+
+        log.info(delimiter);
         log.info(
-            "$$$ Total price in {} cafe = {} $$$",
-            style,
-            currency.format(coffee.getPrice() + tea.getPrice())
+            "\t$$$ Total price in {} shop = {} $$$",
+            rank,
+            currency.format(devicePrice + coffeePrice)
         );
+        log.info(delimiter);
     }
 }

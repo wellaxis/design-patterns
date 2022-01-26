@@ -2,6 +2,7 @@ package com.witalis.design.patterns.pattern.creational.factory.method.content.fa
 
 import com.witalis.design.patterns.pattern.creational.factory.method.content.object.*;
 
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -10,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
  * Date: 30.12.2021
  */
 @Slf4j
+@Data
 public abstract class ComputerShop implements DeviceShop {
     private final DeviceRank rank;
 
@@ -38,7 +40,7 @@ public abstract class ComputerShop implements DeviceShop {
 
         log.info(
             "\t$ The {} device is ready, thanks for business!",
-            type.name().toLowerCase()
+            getRank().name().toLowerCase()
         );
         return device;
     }
