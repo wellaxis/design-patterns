@@ -13,6 +13,21 @@ Goal of project
 > - Anti design patterns
 ***
 
+Subject Area
+------------
+
+> One single subject area has been chosen for all design patterns.
+> This enhances the understanding of patterns and their appliance through the modification of this area.
+
+Area Structure:
+```md
+- Device (interface)
+- Device Type (enumeration)
+- Computer (abstract class)
+    - Laptop, Tablet, Mobile, etc (classes) 
+```
+***
+
 Installation
 ------------
 
@@ -51,7 +66,7 @@ $ PATTERNS_HOME = [path]\design-patterns
 Structure
 ---------
 
-- patterns [root application directory]
+- design-patterns [root application directory]
     - bin [folder contains batch files]
     - log [folder contains module logs]
     - res [folder contains results of run]
@@ -65,6 +80,7 @@ Framework
 Application uses a number of open source frameworks:
 * [`slf4j`, `log4j`] - for application logging
 * [`lombok`] - to generate class environment
+* [`junit`] - to test design patterns functionalities
 * etc
 ***
 
