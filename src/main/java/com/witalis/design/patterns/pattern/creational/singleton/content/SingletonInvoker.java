@@ -53,6 +53,10 @@ public class SingletonInvoker {
             var serial = SerializedSingleton.getInstance();
             log.info("\t> Serialized: {}", serial);
 
+            // virtual proxy initialization
+            var proxy = VirtualProxySingleton.getInstance();
+            log.info("\t> Virtual proxy: {}", proxy);
+
             log.info("");
 
         } catch (Exception e) {
